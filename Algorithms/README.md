@@ -1,7 +1,35 @@
 # Algorithms
 
 # Table of Contents
+- [Big O Notation](#big-o-notation)
 - [Sorting](#sorting)
+
+## Big O Notation
+Big O Notation is a mathematical notation used in computer science and algorithm analysis to describe the upper bound or worst-case time complexity of an algorithm. It provides a way to classify algorithms based on how their execution time grows in relation to the size of the input data. Understanding Big O Notation is crucial for evaluating algorithm efficiency and making informed decisions when choosing algorithms for specific tasks.
+
+Big O Notation expresses the time complexity of an algorithm as a function of the input size (typically denoted as "n"). It allows us to answer questions like "How does the execution time of an algorithm scale as the input size increases?" By analyzing the Big O complexity of an algorithm, we can make informed decisions about which algorithm to choose for a particular problem.
+
+### Common Notations
+#### O(1) - Constant Time Complexity
+Algorithms with constant time complexity execute in the same amount of time regardless of the input size. They have a fixed number of operations.
+
+#### O(log n) - Logarithmic Time Complexity
+Algorithms with logarithmic time complexity reduce the problem size by a constant factor in each step. They are efficient for large datasets.
+
+#### O(n) - Linear Time Complexity
+Algorithms with linear time complexity have their execution time grow proportionally with the size of the input. Doubling the input size roughly doubles the execution time.
+
+#### O(n log n) - Linearithmic Time Complexity
+Algorithms with linearithmic time complexity combine linear and logarithmic growth. They are efficient for many sorting and divide-and-conquer algorithms.
+
+#### O(n^2) - Quadratic Time Complexity
+Algorithms with quadratic time complexity have their execution time grow with the square of the input size. They are less efficient and may become impractical for large inputs.
+
+#### O(n^k) - Polynomial Time Complexity
+Algorithms with polynomial time complexity have their execution time grow with a power of the input size. The value of "k" determines the degree of the polynomial.
+
+#### O(2^n) - Exponential Time Complexity
+Algorithms with exponential time complexity have execution times that grow exponentially with the input size. They are highly inefficient and impractical for large inputs.
 
 ## Sorting
 Sorting is a fundamental operation in computer science and data processing. It involves arranging a collection of items or data elements in a specific order, typically in ascending or descending order. Sorting is a key step in various algorithms and applications, including searching, data analysis, and database management. This section explores different sorting algorithms, their characteristics, and their use cases.
