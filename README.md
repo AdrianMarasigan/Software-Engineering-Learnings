@@ -6,6 +6,8 @@ I have 5 years years of experience in technical project management, product mana
 
 Prior to my software engineering journey, I worked in healthcare and pharmaceuticals. My shift to software development started when I spearheaded the requirements for an inventory management system, where I collaborated with 13 organizations on understanding how they captured data and worked with the development team to build a data model and document requirements.
 
+Feel free to check out my [Linkedin](www.linkedin.com/in/adrian-marasigan).
+
 ## Highlight Projects
 My focus right now is fundamental learning of topics and small projects. Please reference the Table of Contents to see where I am with my learning.
 
