@@ -469,44 +469,51 @@ Trees are hierarchical data structures that are widely used in computer science 
 ## Tree Structure
 A tree can be implemented with data and its children. In Python, a common way to represent a tree is by defining a TreeNode class that contains data and references to its child nodes.
 
-```Python
-# Implementation of TreeNode Class
-class TreeNode:
-    def __init__(self, data):
-        self.data = data
-        self.children = []
-```
-
 The key parts of the tree structure are:
 
 1. Root Node: The root node is the topmost node in the tree and serves as the starting point for traversing the tree's structure. It represents the overall entity or concept that the tree represents.
-
-```Python
-# Creating a tree with a root node
-root = TreeNode("A")
-```
-
 2. Parent and Child Nodes: Nodes in a tree are connected in a hierarchical manner, forming a parent-child relationship. Each node (except for the root) has a parent node and may have zero or more child nodes. This parent-child relationship defines the structure of the tree and allows for the organization of data into meaningful categories.
-Python
-
-```Python
-# Creating a tree with parent and child nodes
-root = TreeNode("A")
-child1 = TreeNode("B")
-child2 = TreeNode("C")
-root.children.append(child1)
-root.children.append(child2)
-```
-
 3. Leaf Nodes: Leaf nodes are nodes in the tree that have no child nodes. They are the endpoints of branches in the tree and represent individual data elements or entities. Leaf nodes are essential for representing the lowest-level data in the hierarchical structure.
 
+Below is an implementation of a Tree in Python:
+
 ```Python
-# Creating a tree with leaf nodes
-root = TreeNode("A")
-child1 = TreeNode("B")
-child2 = TreeNode("C")
-root.children.append(child1)
-root.children.append(child2)
+# Node in a Tree
+# Nodes in a tree represent data elements, entities, or points of interest.
+# Each node can have a unique label or identifier to distinguish it from other nodes.
+
+class TreeNode:
+    def __init__(self, label, data=None):
+        self.label = label  # Unique label for the node
+        self.data = data    # Data associated with the node
+        self.children = []  # List of child nodes
+
+# Creating a Tree
+# A tree can be constructed by creating nodes and connecting them.
+
+
+# Create nodes
+root = TreeNode("A", data="Root Data")
+node_b = TreeNode("B", data="Node B Data")
+node_c = TreeNode("C", data="Node C Data")
+
+# Connect nodes to form the tree structure
+root.children.append(node_b)
+root.children.append(node_c)
+
+# Example usage:
+# Accessing data and children of nodes
+print("Root Label:", root.label)
+print("Root Data:", root.data)
+
+for child in root.children:
+    print(f"Child Label: {child.label}, Child Data: {child.data}")
+
+# Output:
+# Root Label: A
+# Root Data: Root Data
+# Child Label: B, Child Data: Node B Data
+# Child Label: C, Child Data: Node C Data
 ```
 
 ## Use Cases
@@ -532,6 +539,68 @@ The key parts of the graph structure are:
 1. Nodes (Vertices): Nodes in a graph represent data elements, entities, or points of interest. Each node can have a unique label or identifier to distinguish it from other nodes.
 2. Edges: Edges in a graph represent relationships or connections between nodes. They can be directed (with a specific direction) or undirected (bidirectional). Edges can also have associated weights or costs, which can be used for various applications, such as route planning or network optimization.
 3. Directed and Undirected Graphs: The nature of edges determines whether a graph is directed or undirected. In directed graphs, edges have a direction, indicating a one-way relationship. In undirected graphs, edges have no direction, representing mutual connections between nodes.
+
+Below is an example implementation of a graph in python:
+
+```Python
+# Nodes (Vertices)
+# Nodes in a graph represent data elements, entities, or points of interest.
+# Each node can have a unique label or identifier to distinguish it from other nodes.
+
+class Node:
+    def __init__(self, label):
+        self.label = label
+
+# Edges
+# Edges in a graph represent relationships or connections between nodes.
+# They can be directed (with a specific direction) or undirected (bidirectional).
+# Edges can also have associated weights or costs.
+
+class Edge:
+    def __init__(self, start, end, weight=None, directed=False):
+        self.start = start
+        self.end = end
+        self.weight = weight
+        self.directed = directed
+
+# Directed and Undirected Graphs
+# The nature of edges determines whether a graph is directed or undirected.
+# In directed graphs, edges have a direction, indicating a one-way relationship.
+# In undirected graphs, edges have no direction, representing mutual connections between nodes.
+
+class Graph:
+    def __init__(self):
+        self.nodes = {}  # A dictionary to store nodes and their neighbors
+
+    def add_node(self, node):
+        if node.label not in self.nodes:
+            self.nodes[node.label] = []
+
+    def add_edge(self, edge):
+        if edge.start.label in self.nodes and edge.end.label in self.nodes:
+            self.nodes[edge.start.label].append(edge)
+
+    def __str__(self):
+        graph_str = ""
+        for node, edges in self.nodes.items():
+            graph_str += f"{node}: "
+            for edge in edges:
+                if edge.directed:
+                    graph_str += f"({edge.end.label}, {edge.weight}) "
+                else:
+                    graph_str += f"{edge.end.label} "
+            graph_str += "\n"
+        return graph_str
+
+# Example usage:
+# Create nodes
+node_a = Node("A")
+node_b = Node("B")
+node_c = Node("C")
+
+# Create edges (unweighted and undirected)
+edge1 = Edge(node_a,
+```
 
 ## Graph Representation
 Graph representations, such as adjacency lists and adjacency matrices, are fundamental concepts in graph theory and have their own advantages and use cases.
