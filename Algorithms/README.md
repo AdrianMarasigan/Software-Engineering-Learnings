@@ -3,6 +3,7 @@
 # Table of Contents
 - [Big O Notation](#big-o-notation)
 - [Sorting](#sorting)
+- [Searching](#searching)
 
 ## Big O Notation
 Big O Notation is a mathematical notation used in computer science and algorithm analysis to describe the upper bound or worst-case time complexity of an algorithm. It provides a way to classify algorithms based on how their execution time grows in relation to the size of the input data. Understanding Big O Notation is crucial for evaluating algorithm efficiency and making informed decisions when choosing algorithms for specific tasks.
@@ -10,26 +11,19 @@ Big O Notation is a mathematical notation used in computer science and algorithm
 Big O Notation expresses the time complexity of an algorithm as a function of the input size (typically denoted as "n"). It allows us to answer questions like "How does the execution time of an algorithm scale as the input size increases?" By analyzing the Big O complexity of an algorithm, we can make informed decisions about which algorithm to choose for a particular problem.
 
 ### Common Notations
-#### O(1) - Constant Time Complexity
-Algorithms with constant time complexity execute in the same amount of time regardless of the input size. They have a fixed number of operations.
+- O(1) - Constant Time Complexity: Algorithms with constant time complexity execute in the same amount of time regardless of the input size. They have a fixed number of operations.
 
-#### O(log n) - Logarithmic Time Complexity
-Algorithms with logarithmic time complexity reduce the problem size by a constant factor in each step. They are efficient for large datasets.
+- O(log n) - Logarithmic Time Complexity: Algorithms with logarithmic time complexity reduce the problem size by a constant factor in each step. They are efficient for large datasets.
 
-#### O(n) - Linear Time Complexity
-Algorithms with linear time complexity have their execution time grow proportionally with the size of the input. Doubling the input size roughly doubles the execution time.
+- O(n) - Linear Time Complexity: Algorithms with linear time complexity have their execution time grow proportionally with the size of the input. Doubling the input size roughly doubles the execution time.
 
-#### O(n log n) - Linearithmic Time Complexity
-Algorithms with linearithmic time complexity combine linear and logarithmic growth. They are efficient for many sorting and divide-and-conquer algorithms.
+- O(n log n) - Linearithmic Time Complexity: Algorithms with linearithmic time complexity combine linear and logarithmic growth. They are efficient for many sorting and divide-and-conquer algorithms.
 
-#### O(n^2) - Quadratic Time Complexity
-Algorithms with quadratic time complexity have their execution time grow with the square of the input size. They are less efficient and may become impractical for large inputs.
+- O(n^2) - Quadratic Time Complexity: Algorithms with quadratic time complexity have their execution time grow with the square of the input size. They are less efficient and may become impractical for large inputs.
 
-#### O(n^k) - Polynomial Time Complexity
-Algorithms with polynomial time complexity have their execution time grow with a power of the input size. The value of "k" determines the degree of the polynomial.
+- O(n^k) - Polynomial Time Complexity: Algorithms with polynomial time complexity have their execution time grow with a power of the input size. The value of "k" determines the degree of the polynomial.
 
-#### O(2^n) - Exponential Time Complexity
-Algorithms with exponential time complexity have execution times that grow exponentially with the input size. They are highly inefficient and impractical for large inputs.
+- O(2^n) - Exponential Time Complexity: Algorithms with exponential time complexity have execution times that grow exponentially with the input size. They are highly inefficient and impractical for large inputs.
 
 ## Sorting
 Sorting is a fundamental operation in computer science and data processing. It involves arranging a collection of items or data elements in a specific order, typically in ascending or descending order. Sorting is a key step in various algorithms and applications, including searching, data analysis, and database management. This section explores different sorting algorithms, their characteristics, and their use cases.
@@ -196,13 +190,10 @@ def partition(arr, low, high):
 Heap Sort is a comparison-based sorting algorithm that leverages the properties of a binary heap data structure. It builds a max-heap (for ascending order) or a min-heap (for descending order) from the input list and repeatedly removes the root element (the maximum or minimum, depending on the heap type) to build the sorted list. Heap Sort is efficient and can achieve a consistent O(n log n) time complexity.
 
 #### Key Characteristics
-Heap Data Structure: Heap Sort relies on a binary heap data structure, which is a binary tree with specific properties (max-heap or min-heap). It uses the heap to efficiently find the maximum (for ascending order) or minimum (for descending order) element in the list.
-
-In-Place Sorting: Heap Sort can be implemented as an in-place sorting algorithm, meaning it sorts the original list without requiring additional memory for temporary data structures.
-
-Not Always Stable: Heap Sort is not a stable sorting algorithm. It may change the relative order of equal elements.
-
-Efficient Time Complexity: Heap Sort has an average and worst-case time complexity of O(n log n), making it efficient for large datasets.
+1. Heap Data Structure: Heap Sort relies on a binary heap data structure, which is a binary tree with specific properties (max-heap or min-heap). It uses the heap to efficiently find the maximum (for ascending order) or minimum (for descending order) element in the list.
+2. In-Place Sorting: Heap Sort can be implemented as an in-place sorting algorithm, meaning it sorts the original list without requiring additional memory for temporary data structures.
+3. Not Always Stable: Heap Sort is not a stable sorting algorithm. It may change the relative order of equal elements.
+4. Efficient Time Complexity: Heap Sort has an average and worst-case time complexity of O(n log n), making it efficient for large datasets.
 
 Use Cases: Heap Sort is often used when a stable sorting algorithm is not required, and efficiency is crucial. It is suitable for sorting large datasets and is used in various applications, including priority queues and scheduling algorithms.
 
@@ -235,3 +226,45 @@ def heapify(arr, n, i):
         heapify(arr, n, largest)
 ```
 
+## Searching
+Searching algorithms are essential in computer science and data processing to locate specific elements within a data structure, such as an array or list. These algorithms are designed to efficiently find the target element(s) within the data, and their choice depends on factors like data structure properties, data ordering, and efficiency requirements. This section explores different searching algorithms, their characteristics, and use cases.
+
+### Linear Search
+Linear Search, also known as Sequential Search, is a straightforward searching algorithm that iterates through the entire dataset from start to finish, checking each element one by one until the target element is found or the entire dataset has been scanned. It is suitable for unordered data but can be inefficient for large datasets.
+
+#### Key Characteristics
+1. Linear Time Complexity: Linear Search has a time complexity of O(n) in the worst-case scenario, where "n" is the size of the dataset. This means the algorithm's time requirements grow linearly with the dataset size.
+2. Simple Implementation: Linear Search is easy to implement and does not require the data to be sorted. It is useful when the dataset lacks any specific ordering.
+
+Use Cases: Linear Search is suitable for small datasets or scenarios where data is not ordered or indexed. It is also commonly used for searching in linked lists.
+
+```Python
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+```
+
+### Binary Search
+Binary Search is a more efficient searching algorithm designed for ordered datasets. It repeatedly divides the dataset in half and compares the middle element with the target value. If the target is smaller, the algorithm continues searching in the lower half; if the target is larger, it searches in the upper half. Binary Search quickly narrows down the search space and is highly efficient for large ordered datasets.
+
+#### Key Characteristics
+1. Logarithmic Time Complexity: Binary Search has a time complexity of O(log n) in the worst-case scenario. It effectively reduces the search space by half in each step, making it suitable for large datasets.
+2. Ordered Data Requirement: Binary Search requires the data to be sorted in ascending or descending order to work correctly. This requirement ensures that the algorithm can eliminate half of the remaining elements in each step.
+
+Use Cases: Binary Search is ideal for searching in sorted arrays or lists. It is commonly used in searching applications and is a fundamental algorithm in computer science.
+
+```Python
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+```
