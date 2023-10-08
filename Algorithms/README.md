@@ -8,7 +8,7 @@
 - [Recursive and Backtracking](#recursive-and-backtracking)
 - [Divide and Conquer](#divide-and-conquer)
 - [Tree Traversals](#tree-traversals)
-- [Graph](#graph)
+- [Graph](#Graph)
 - [Dynamic Programming](#dynamic-programming)
 
 ## Big O Notation
@@ -778,41 +778,27 @@ There are two key characteristics to look out for:
 2. Overlapping Subproblems: DP problems have subproblems that are solved multiple times with the same inputs. DP algorithms store the solutions to these subproblems in a table or cache to avoid redundant calculations, which significantly improves efficiency.
 
 There are two implementations of Dynamic Programming:
-1. Memoization (Top-Down)
-2. Tabulation (Bottom-Up)
+1. Memoization (Top-Down): One approach to DP is memoization, where the recursive algorithm is enhanced with a data structure (usually a dictionary or array) to store the results of subproblems as they are computed. When a subproblem is encountered again, its solution is retrieved from the data structure rather than recalculating it.
+2. Tabulation (Bottom-Up): Another approach is tabulation, where DP solutions are built iteratively from the smallest subproblems to the original problem. Tabulation typically uses an array or table to store intermediate results and builds up to the final solution.
 
-### Memoization (Top-Down):
-One approach to DP is memoization, where the recursive algorithm is enhanced with a data structure (usually a dictionary or array) to store the results of subproblems as they are computed. When a subproblem is encountered again, its solution is retrieved from the data structure rather than recalculating it.
+Approach to Solving
+1. Understand the Problem: Before diving into the problem-solving process, it's essential to thoroughly understand the problem statement, including its constraints and the optimization goal. Identify what needs to be optimized (e.g., maximum/minimum value, longest/shortest path, etc.).
+2. Identify the States: States represent the subproblems that need to be solved to reach the overall solution. States can be thought of as parameters that uniquely define the current problem's state. These states are often related to the problem's variables or dimensions. Key points to consider:
+  - What variables or parameters uniquely define the current state of the problem?
+  - Are there multiple dimensions or variables involved?
+  - Are there any constraints on the states?
 
-### Tabulation (Bottom-Up):
-Another approach is tabulation, where DP solutions are built iteratively from the smallest subproblems to the original problem. Tabulation typically uses an array or table to store intermediate results and builds up to the final solution.
+3. Define the Recurrence Relation: The recurrence relation defines how the solution to the current state can be expressed in terms of the solutions to smaller subproblems. It is typically a mathematical equation that relates the current state to one or more previous states. Key considerations:
+  - Express the current state in terms of one or more previous states (subproblems).
+  - Understand how the optimization goal (e.g., maximizing/minimizing) is reflected in the recurrence relation.
+  - Consider the problem's constraints and ensure they are satisfied in the relation.
 
-### Approach to Solving
-1. Understand the Problem
-Before diving into the problem-solving process, it's essential to thoroughly understand the problem statement, including its constraints and the optimization goal. Identify what needs to be optimized (e.g., maximum/minimum value, longest/shortest path, etc.).
+4. Specify the Base Cases: Base cases are the smallest subproblems for which the solutions are known without further recursion. They serve as stopping conditions for the recursive process. Pay attention to:
+  - Identify the simplest cases where no further recursion is needed.
+  - Ensure that base cases provide meaningful solutions.
+  - Base cases are often related to specific states where no further optimization is possible.
 
-2. Identify the States
-States represent the subproblems that need to be solved to reach the overall solution. States can be thought of as parameters that uniquely define the current problem's state. These states are often related to the problem's variables or dimensions. Key points to consider:
-  1. What variables or parameters uniquely define the current state of the problem?
-  2. Are there multiple dimensions or variables involved?
-  3. Are there any constraints on the states?
-
-3. Define the Recurrence Relation
-The recurrence relation defines how the solution to the current state can be expressed in terms of the solutions to smaller subproblems. It is typically a mathematical equation that relates the current state to one or more previous states. Key considerations:
-  1. Express the current state in terms of one or more previous states (subproblems).
-  2. Understand how the optimization goal (e.g., maximizing/minimizing) is reflected in the recurrence relation.
-  3. Consider the problem's constraints and ensure they are satisfied in the relation.
-
-4. Specify the Base Cases
-Base cases are the smallest subproblems for which the solutions are known without further recursion. They serve as stopping conditions for the recursive process. Pay attention to:
-  1. Identify the simplest cases where no further recursion is needed.
-  2. Ensure that base cases provide meaningful solutions.
-  3. Base cases are often related to specific states where no further optimization is possible.
-
-5. Choose Memoization or Tabulation
-A common approach is to design memoization first, since many people find this more intuitive.
-
-Decide whether to use memoization (top-down) or tabulation (bottom-up) to implement the DP solution. Each approach has its strengths:
+5. Choose Memoization or Tabulation: A common approach is to design memoization first, since many people find this more intuitive.Decide whether to use memoization (top-down) or tabulation (bottom-up) to implement the DP solution. Each approach has its strengths:
   - Memoization: Use memoization when it's more intuitive to solve the problem recursively. It involves caching subproblem solutions as they are computed. Make sure to check the cache before computing a subproblem.
   - Tabulation: Use tabulation when efficiency is a concern or when the problem naturally lends itself to iterative calculation. In tabulation, you build up solutions iteratively from smaller subproblems.
 
