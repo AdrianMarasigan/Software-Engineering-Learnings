@@ -377,7 +377,6 @@ my_set.add(40)  # Resizing may occur here if the load factor threshold is reache
 print(my_set)  # Output: {10, 20, 30, 40}
 ```
 
-
 ## Use Cases
 - Checking for the presence of an element in a large collection (e.g., membership test).
 - Removing duplicates from a list or collection of data.
@@ -526,24 +525,89 @@ Graphs are versatile data structures used in computer science and various fields
 
 3. Directed vs. Undirected: Graphs can be either directed or undirected. In a directed graph, edges have a direction, indicating a one-way relationship from one node to another. In an undirected graph, edges have no direction, representing a two-way relationship between nodes.
 
-### Graph Structure
+## Graph Structure
 Graphs can be implemented with nodes and edges, and they can be represented as adjacency lists or adjacency matrices.
 
-```Python
-# Example of a graph using an adjacency list representation
-graph = {
-    'A': ['B', 'C'],
-    'B': ['A', 'C', 'D'],
-    'C': ['A', 'B'],
-    'D': ['B']
-}
-```
-
 The key parts of the graph structure are:
-
 1. Nodes (Vertices): Nodes in a graph represent data elements, entities, or points of interest. Each node can have a unique label or identifier to distinguish it from other nodes.
 2. Edges: Edges in a graph represent relationships or connections between nodes. They can be directed (with a specific direction) or undirected (bidirectional). Edges can also have associated weights or costs, which can be used for various applications, such as route planning or network optimization.
 3. Directed and Undirected Graphs: The nature of edges determines whether a graph is directed or undirected. In directed graphs, edges have a direction, indicating a one-way relationship. In undirected graphs, edges have no direction, representing mutual connections between nodes.
+
+## Graph Representation
+Graph representations, such as adjacency lists and adjacency matrices, are fundamental concepts in graph theory and have their own advantages and use cases.
+
+### Adjacency List
+An adjacency list is a popular way to represent a graph as a collection of linked lists or arrays. In this representation, each vertex (or node) in the graph is associated with a list of its neighboring vertices.
+
+Adjacency lists are commonly used when dealing with sparse graphs or when you need efficient traversal and want to conserve memory.
+
+```Python
+class Graph:
+    def __init__(self, vertices):
+        self.vertices = vertices
+        self.adjacency_list = {vertex: [] for vertex in range(vertices)}
+
+    def add_edge(self, u, v):
+        # Add an edge from vertex u to vertex v
+        self.adjacency_list[u].append(v)
+        # For an undirected graph, add the reverse edge as well
+        # self.adjacency_list[v].append(u)
+
+    def print_adjacency_list(self):
+        for vertex in self.adjacency_list:
+            print(f"Vertex {vertex}:", "->".join(map(str, self.adjacency_list[vertex])))
+
+
+# Create a graph with 4 vertices
+g = Graph(4)
+
+# Add edges to the graph
+g.add_edge(0, 1)
+g.add_edge(0, 2)
+g.add_edge(1, 2)
+g.add_edge(2, 0)
+g.add_edge(2, 3)
+g.add_edge(3, 3)
+
+# Print the adjacency list
+g.print_adjacency_list()
+```
+### Adjacency Matrix:
+An adjacency matrix is a 2D array where each cell (i, j) represents an edge between vertex i and vertex j. If there's an edge, the cell contains 1 (or a weight for weighted graphs); otherwise, it contains 0.
+
+Adjacency lists are commonly used when dealing with sparse graphs or when you need efficient traversal and want to conserve memory.
+
+```Python
+class Graph:
+    def __init__(self, vertices):
+        self.vertices = vertices
+        self.adjacency_list = {vertex: [] for vertex in range(vertices)}
+
+    def add_edge(self, u, v):
+        # Add an edge from vertex u to vertex v
+        self.adjacency_list[u].append(v)
+        # For an undirected graph, add the reverse edge as well
+        # self.adjacency_list[v].append(u)
+
+    def print_adjacency_list(self):
+        for vertex in self.adjacency_list:
+            print(f"Vertex {vertex}:", "->".join(map(str, self.adjacency_list[vertex])))
+
+
+# Create a graph with 4 vertices
+g = Graph(4)
+
+# Add edges to the graph
+g.add_edge(0, 1)
+g.add_edge(0, 2)
+g.add_edge(1, 2)
+g.add_edge(2, 0)
+g.add_edge(2, 3)
+g.add_edge(3, 3)
+
+# Print the adjacency list
+g.print_adjacency_list()
+```
 
 ## Use Cases
 - Graphs are used in a wide range of applications across different fields due to their ability to model complex relationships and connections. Some common use cases include:
