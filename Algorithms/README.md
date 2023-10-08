@@ -5,6 +5,11 @@
 - [Sorting](#sorting)
 - [Searching](#searching)
 - [Strings](#strings)
+- [Recursive and Backtracking](#recursive-and-backtracking)
+- [Divide and Conquer](#divide-and-conquer)
+- [Tree Traversals](#tree-traversals)
+- [Graph](#graph)
+- [Dynamic Programming](#dynamic-programming)
 
 ## Big O Notation
 Big O Notation is a mathematical notation used in computer science and algorithm analysis to describe the upper bound or worst-case time complexity of an algorithm. It provides a way to classify algorithms based on how their execution time grows in relation to the size of the input data. Understanding Big O Notation is crucial for evaluating algorithm efficiency and making informed decisions when choosing algorithms for specific tasks.
@@ -278,7 +283,7 @@ String algorithms are specialized algorithms used for processing and manipulatin
 The Knuth-Morris-Pratt (KMP) Algorithm is used for substring searching within a longer string. It efficiently finds all occurrences of a substring by avoiding unnecessary character comparisons.
 
 #### Key Characteristics
-1. Efficiency: The KMP Algorithm achieves a time complexity of O(n + m), where "n" is the length of the text and "m" is the length of the substring to be searched.
+1. Time Complexity: The KMP Algorithm achieves a time complexity of O(n + m), where "n" is the length of the text and "m" is the length of the substring to be searched.
 2. Partial Match Table: KMP uses a precomputed partial match table to skip comparisons when a mismatch occurs. This enhances its efficiency.
 
 Use Cases: KMP is suitable for searching substrings within texts, including applications like text editors, search engines, and string pattern matching.
@@ -314,7 +319,7 @@ def kmp_search(text, pattern):
 The Boyer-Moore Algorithm is another efficient substring searching algorithm. It uses a "bad character" and "good suffix" rule to skip unnecessary comparisons.
 
 #### Key Characteristics
-1. Efficiency: The Boyer-Moore Algorithm achieves a time complexity of O(n + m) in practice. It is known for its speed in practical applications.
+1. Time Complexity: The Boyer-Moore Algorithm achieves a time complexity of O(n + m) in practice. It is known for its speed in practical applications.
 2. Heuristic Rules: Boyer-Moore uses heuristic rules to skip comparisons based on the last occurrence of characters in the substring and the text.
 
 Use Cases: Boyer-Moore is widely used for searching substrings in text processing, including searching in large documents and string matching.
@@ -365,7 +370,7 @@ def boyer_moore_search(text, pattern):
 String reversal is a common string manipulation task that involves reversing the order of characters in a string.
 
 #### Key Characteristics
-1. Efficiency: String reversal can be achieved with a time complexity of O(n), where "n" is the length of the string.
+1. Time Complexity: String reversal can be achieved with a time complexity of O(n), where "n" is the length of the string.
 2. In-Place vs. Out-of-Place: String reversal can be done in-place (modifying the original string) or out-of-place (creating a new reversed string).
 
 Use Cases: String reversal is useful in various applications, including text processing, cryptography, and data transformation.
@@ -379,7 +384,7 @@ def reverse_string(input_string):
 String concatenation involves combining two or more strings into a single string.
 
 #### Key Characteristics
-1. Efficiency: The time complexity of string concatenation depends on the implementation. In most cases, it is O(n), where "n" is the total length of the strings being concatenated.
+1. Time Complexity: The time complexity is O(n), where "n" is the total length of the strings being concatenated.
 2. In-Place vs. Out-of-Place: Some string concatenation methods modify the original string (in-place), while others create a new string (out-of-place).
 
 Use Cases: String concatenation is essential for building longer strings from smaller components, such as in text generation, logging, and data serialization.
@@ -425,7 +430,7 @@ print(matches)  # Output: ['example@email.com']
 The Rabin-Karp Algorithm is a string matching algorithm that uses hashing to find occurrences of a pattern in a text efficiently.
 
 #### Key Characteristics
-1. Efficiency: Rabin-Karp has an average-case time complexity of O(n + m), where "n" is the length of the text and "m" is the length of the pattern. It is particularly efficient for large texts and patterns.
+1. Time Complexity: Rabin-Karp has an average-case time complexity of O(n + m), where "n" is the length of the text and "m" is the length of the pattern. It is particularly efficient for large texts and patterns.
 2. Hashing: Rabin-Karp uses rolling hashing to compute hash values for the text and the pattern. This allows for quick comparisons and shifts.
 
 Use Cases: Rabin-Karp is used for pattern matching in text processing, plagiarism detection, and substring searching.
@@ -446,3 +451,385 @@ def rabin_karp_search(text, pattern):
 
     return matches
 ```
+
+## Divide and Conquer
+Divide and Conquer is a fundamental algorithmic technique that involves breaking down a complex problem into smaller, more manageable subproblems, solving these subproblems independently, and then combining their solutions to solve the original problem. This section explores different Divide and Conquer Algorithms, their characteristics, and use cases.
+
+Divide and Conquer algorithms follow a three-step process: Divide, Conquer, and Combine. These algorithms are particularly effective when a problem can be divided into smaller, similar subproblems that can be solved independently.
+
+You can refer to Merge Sort and Quick Sort above for examples of this.
+
+## Recursive and Backtracking
+Recursive algorithms are algorithms that solve problems by breaking them down into smaller, self-similar subproblems. Backtracking algorithms are a subset of recursive algorithms that systematically explore all possible solutions to a problem and backtrack when a solution is not feasible. This section explores different Recursive and Backtracking Algorithms, their characteristics, and use cases.
+
+Recursive and Backtracking algorithms are particularly useful when a problem can be naturally divided into smaller, similar subproblems. Recursive algorithms solve these subproblems through recursive calls, while Backtracking algorithms explore possible solutions and backtrack when necessary.
+
+### Factorial Calculation
+Factorial Calculation is a recursive algorithm that calculates the factorial of a non-negative integer "n."
+
+#### Key Characteristics
+1. Time Complexity: Factorial Calculation has a time complexity of O(n) and a space complexity of O(n) due to recursive function calls.
+2. Recursive Definition: The factorial of n (denoted as n!) is defined recursively as n! = n * (n-1)!
+
+```Python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+```
+
+### Fibonacci Sequence
+The Fibonacci Sequence is a recursive algorithm that generates the nth Fibonacci number, where each number is the sum of the two preceding ones.
+
+#### Key Characteristics
+1. Time Complexity: The recursive Fibonacci algorithm has exponential time complexity (O(2^n)) due to redundant calculations.
+2. Recursive Definition: The nth Fibonacci number is defined recursively as F(n) = F(n-1) + F(n-2).
+
+```Python
+def fibonacci_recursive(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+```
+
+### Depth-First Search (DFS)
+Depth-First Search is a recursive graph traversal algorithm that explores as far as possible along each branch before backtracking.
+
+#### Key Characteristics
+1. Time Complexity: DFS has a time complexity of O(V + E), where "V" is the number of vertices and "E" is the number of edges in the graph.
+2. Stack-Based Recursion: DFS uses a stack-based recursive approach to explore vertices and their neighbors.
+
+Below is the recursive implementation. I'll include the iterative stack approach in the graph algorithm section. 
+``` Python
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['F'],
+    'D': [],
+    'E': ['F'],
+    'F': []
+}
+
+visited = set()
+
+def dfs_recursive(node):
+    if node not in visited:
+        print(node)
+        visited.add(node)
+        for neighbor in graph[node]:
+            dfs_recursive(neighbor)
+
+# Example usage
+dfs_recursive('A')
+```
+
+## Tree Traversals
+Tree Traversal algorithms are used to visit and process all the nodes in a tree data structure systematically. These algorithms provide a way to explore the tree's structure and retrieve or manipulate data from each node. This section explores different Tree Traversal Algorithms, their characteristics, and use cases.
+
+Tree Traversal algorithms are used to navigate and process tree structures, which consist of nodes connected by edges. These algorithms can be applied to various types of trees, including binary trees and general trees.
+
+### Depth First Traversal
+Depth-First Traversal algorithms explore the tree structure by visiting nodes along a path as deeply as possible before backtracking. There are three common depth-first traversals: Preorder, Inorder, and Postorder.
+
+#### Preorder Traversal
+Preorder Traversal visits nodes in the following order: root, left subtree, right subtree.
+
+Usage: Preorder traversal is useful for making a copy of the tree (cloning), serializing the tree to a string, or evaluating expressions in expression trees.
+
+
+Here is the recursive implementation in Python:
+```Python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def preorder_traversal(root):
+    if root is None:
+        return []
+    result = [root.val]
+    result.extend(preorder_traversal(root.left))
+    result.extend(preorder_traversal(root.right))
+    return result
+```
+
+Here is the non-recursive iteration using a stack:
+```Python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def preorder_traversal(root):
+    if root is None:
+        return []
+    result = []
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        result.append(node.val)
+        # Push the right child first (since it will be processed after the left child)
+        if node.right:
+            stack.append(node.right)
+        if node.left:
+            stack.append(node.left)
+    return result
+```
+
+### Inorder Traversal
+Inorder Traversal visits nodes in the following order: left subtree, root, right subtree.
+
+Usage: Inorder traversal is commonly used for sorting binary search trees (BSTs) and evaluating expressions represented as expression trees.
+
+Here is the recursive implementation in Python
+```Python
+def inorder_traversal(root):
+    if root is None:
+        return []
+    result = inorder_traversal(root.left)
+    result.append(root.val)
+    result.extend(inorder_traversal(root.right))
+    return result
+```
+
+Here is the non-recursive implementation using a stack:
+```Python
+def inorder_traversal(root):
+    if root is None:
+        return []
+    result = []
+    stack = []
+    current = root
+    while current or stack:
+        while current:
+            stack.append(current)
+            current = current.left
+        current = stack.pop()
+        result.append(current.val)
+        current = current.right
+    return result
+```
+
+### Postorder Traversal
+Postorder Traversal visits nodes in the following order: left subtree, right subtree, root.
+
+Usage: Postorder traversal is useful for deleting the tree (freeing memory) and evaluating postfix expressions.
+
+Here is the recursive implementation in Python
+```Python
+def postorder_traversal(root):
+    if root is None:
+        return []
+    result = postorder_traversal(root.left)
+    result.extend(postorder_traversal(root.right))
+    result.append(root.val)
+    return result
+```
+
+Here in the non-recursive implementation in Python using a stack:
+
+```Python
+def postorder_traversal(root):
+    if root is None:
+        return []
+    result = []
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        result.append(node.val)
+        # Push the left child first (since it will be processed after the right child)
+        if node.left:
+            stack.append(node.left)
+        if node.right:
+            stack.append(node.right)
+    return result[::-1]  # Reverse the result to get postorder traversal
+```
+
+## Breadth-First Traversal
+Breadth-First Traversal (BFS) explores the tree level by level, visiting all nodes at a given level before moving on to the next level.
+
+Usage: BFS is commonly used for finding the shortest path between nodes in a tree, level-order traversal, and various graph algorithms.
+
+```Python
+from collections import deque
+
+def breadth_first_traversal(root):
+    if root is None:
+        return []
+    result = []
+    queue = deque([root])
+    while queue:
+        node = queue.popleft()
+        result.append(node.val)
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
+    return result
+```
+
+## Graph
+
+### Depth-First Search (DFS) 
+DFS is a graph traversal algorithm that explores as far as possible along each branch before backtracking. We've already covered the recursive implementation above, so the non-recursive implementation of DFS uses a stack data structure to traverse the graph iteratively.
+
+
+#### Key Characteristics
+1. Time Complexity: The time complexity of the non-recursive DFS algorithm is O(V + E), where "V" is the number of vertices, and "E" is the number of edges in the graph.
+2. Stack-Based Iteration: Non-recursive DFS uses a stack to simulate the recursive function call stack, ensuring that nodes are visited in the correct order.
+3. Visited Set: To prevent revisiting nodes and to handle disconnected components, a "visited" set is maintained to keep track of visited nodes.
+4. Stack Order: Nodes are pushed onto the stack in the reverse order of their neighbors to ensure that the leftmost neighbor is explored first.
+
+Non-Recursive Python Implementation
+```Python
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def add_edge(self, node, neighbors):
+        self.graph[node] = neighbors
+
+    def dfs_non_recursive(self, start):
+        if start not in self.graph:
+            return []
+        
+        result = []
+        stack = [start]
+        visited = set()
+
+        while stack:
+            node = stack.pop()
+            if node not in visited:
+                visited.add(node)
+                result.append(node)
+                # Push neighbors onto the stack in reverse order to explore them in the correct order
+                neighbors = self.graph[node][::-1]
+                stack.extend(neighbors)
+        
+        return result
+
+# Example usage:
+graph = Graph()
+graph.add_edge('A', ['B', 'C'])
+graph.add_edge('B', ['D', 'E'])
+graph.add_edge('C', ['F'])
+
+dfs_result = graph.dfs_non_recursive('A')
+print(dfs_result)  # Output: ['A', 'B', 'D', 'E', 'C', 'F']
+```
+
+### Breadth-First Search (BFS) Non-Recursive Implementation
+Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes level by level, visiting all nodes at a given level before moving on to the next level. The non-recursive implementation of BFS uses a queue data structure to traverse the graph iteratively.
+
+#### Key Characteristics
+1. Time Complexity: The time complexity of the non-recursive BFS algorithm is O(V + E), where "V" is the number of vertices, and "E" is the number of edges in the graph.
+2. Queue-Based Iteration: Non-recursive BFS uses a queue to maintain the order of nodes to visit, ensuring that nodes at the current level are explored before moving to the next level.
+3. Visited Set: Similar to non-recursive DFS, a "visited" set is maintained to prevent revisiting nodes and handle disconnected components.
+4. Queue Order: Nodes are enqueued in the order of their neighbors to ensure that neighbors at the same level are visited in the correct order.
+
+```Python
+from collections import deque
+
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def add_edge(self, node, neighbors):
+        self.graph[node] = neighbors
+
+    def bfs_non_recursive(self, start):
+        if start not in self.graph:
+            return []
+        
+        result = []
+        queue = deque([start])
+        visited = set()
+
+        while queue:
+            node = queue.popleft()
+            if node not in visited:
+                visited.add(node)
+                result.append(node)
+                # Enqueue neighbors to explore them in the correct order
+                neighbors = self.graph[node]
+                queue.extend(neighbors)
+        
+        return result
+
+# Example usage:
+graph = Graph()
+graph.add_edge('A', ['B', 'C'])
+graph.add_edge('B', ['D', 'E'])
+graph.add_edge('C', ['F'])
+
+bfs_result = graph.bfs_non_recursive('A')
+print(bfs_result)  # Output: ['A', 'B', 'C', 'D', 'E', 'F']
+```
+
+## Dynamic Programming
+Dynamic Programming is a powerful technique used to solve optimization problems by breaking them down into smaller overlapping subproblems and storing their solutions to avoid redundant computations. DP algorithms are commonly used in various fields such as computer science, economics, and engineering to find optimal solutions efficiently.
+
+There are two key characteristics to look out for:
+1. Optimal Substructure: DP problems exhibit optimal substructure, meaning that the optimal solution to the problem can be constructed from the optimal solutions of its subproblems. This property allows for a recursive approach to solving the problem.
+2. Overlapping Subproblems: DP problems have subproblems that are solved multiple times with the same inputs. DP algorithms store the solutions to these subproblems in a table or cache to avoid redundant calculations, which significantly improves efficiency.
+
+There are two implementations of Dynamic Programming:
+1. Memoization (Top-Down)
+2. Tabulation (Bottom-Up)
+
+### Memoization (Top-Down):
+One approach to DP is memoization, where the recursive algorithm is enhanced with a data structure (usually a dictionary or array) to store the results of subproblems as they are computed. When a subproblem is encountered again, its solution is retrieved from the data structure rather than recalculating it.
+
+### Tabulation (Bottom-Up):
+Another approach is tabulation, where DP solutions are built iteratively from the smallest subproblems to the original problem. Tabulation typically uses an array or table to store intermediate results and builds up to the final solution.
+
+### Approach to Solving
+1. Understand the Problem
+Before diving into the problem-solving process, it's essential to thoroughly understand the problem statement, including its constraints and the optimization goal. Identify what needs to be optimized (e.g., maximum/minimum value, longest/shortest path, etc.).
+
+2. Identify the States
+States represent the subproblems that need to be solved to reach the overall solution. States can be thought of as parameters that uniquely define the current problem's state. These states are often related to the problem's variables or dimensions. Key points to consider:
+  1. What variables or parameters uniquely define the current state of the problem?
+  2. Are there multiple dimensions or variables involved?
+  3. Are there any constraints on the states?
+
+3. Define the Recurrence Relation
+The recurrence relation defines how the solution to the current state can be expressed in terms of the solutions to smaller subproblems. It is typically a mathematical equation that relates the current state to one or more previous states. Key considerations:
+  1. Express the current state in terms of one or more previous states (subproblems).
+  2. Understand how the optimization goal (e.g., maximizing/minimizing) is reflected in the recurrence relation.
+  3. Consider the problem's constraints and ensure they are satisfied in the relation.
+
+4. Specify the Base Cases
+Base cases are the smallest subproblems for which the solutions are known without further recursion. They serve as stopping conditions for the recursive process. Pay attention to:
+  1. Identify the simplest cases where no further recursion is needed.
+  2. Ensure that base cases provide meaningful solutions.
+  3. Base cases are often related to specific states where no further optimization is possible.
+
+5. Choose Memoization or Tabulation
+A common approach is to design memoization first, since many people find this more intuitive.
+
+Decide whether to use memoization (top-down) or tabulation (bottom-up) to implement the DP solution. Each approach has its strengths:
+  - Memoization: Use memoization when it's more intuitive to solve the problem recursively. It involves caching subproblem solutions as they are computed. Make sure to check the cache before computing a subproblem.
+  - Tabulation: Use tabulation when efficiency is a concern or when the problem naturally lends itself to iterative calculation. In tabulation, you build up solutions iteratively from smaller subproblems.
+
+### 1D Dynamic Programming
+In 1D DP, the state space is represented using a one-dimensional array or list. Each element of the array corresponds to a unique state. Typically, in 1D DP, you are solving problems that involve a sequence or a single dimension of choices or decisions.
+
+#### Key Characteristics of 1D DP:
+1. Single Dimension: The state space consists of a single dimension, often representing positions or indices in a sequence.
+2. State Transition: The transition from one state to another depends on a recurrence relation that considers only the previous state(s).
+
+Examples: Problems that can be solved with 1D DP include calculating Fibonacci numbers, finding the longest increasing subsequence, and solving problems that involve a linear sequence.
+
+### 2D (or Multi-Dimensional) Dynamic Programming
+In 2D (or multi-dimensional) DP, the state space is represented using a two-dimensional or multi-dimensional array or matrix. Each combination of indices in the array corresponds to a unique state. Problems that involve making multiple choices or decisions with more complex dependencies often require 2D or multi-dimensional DP.
+
+#### Key Characteristics of 2D DP:
+1. Multiple Dimensions: The state space consists of two or more dimensions, each representing different aspects of the problem or different choices or decisions.
+2. State Transition: The transition from one state to another depends on a recurrence relation that considers multiple previous states, often from different dimensions.
+
+Examples: Problems that can be solved with 2D DP include finding the shortest path in a grid, solving knapsack problems, and optimizing problems with multiple constraints.
