@@ -8,7 +8,7 @@
 - [Recursive and Backtracking](#recursive-and-backtracking)
 - [Divide and Conquer](#divide-and-conquer)
 - [Tree Traversals](#tree-traversals)
-- [Graph](#Graph)
+- [Graph](#graph)
 - [Dynamic Programming](#dynamic-programming)
 
 ## Big O Notation
