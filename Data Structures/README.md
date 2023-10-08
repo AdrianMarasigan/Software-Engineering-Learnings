@@ -1,7 +1,14 @@
 # Data Structures
 This section provides an in-depth understanding of fundamental data structures commonly used in computer science and software engineering. Each data structure plays a crucial role in organizing and manipulating data efficiently, making it essential for both beginners and experienced developers.
 # Table of Contents
-- [Arrays](#arrays)<br>
+- [Arrays](#arrays)
+- [Linked Lists](#linked-lists)
+- [Stacks](#stacks)
+- [Queues](#queues)
+- [Hash Sets](#hash-sets)
+- [Hash Maps](#hash-maps)
+- [Trees](#trees)
+- [Graphs](#graphs)
 
 # Arrays
 An array is a fundamental data structure that stores a collection of elements, such as numbers, characters, or other data types, in a contiguous block of memory. Arrays are widely used because they provide efficient access to individual elements based on their index or position within the array.
@@ -374,7 +381,7 @@ print(my_set)  # Output: {10, 20, 30, 40}
 - Removing duplicates from a list or collection of data.
 - Efficiently storing a collection of unique values without manual checks for uniqueness.
 
-# Hash Maps (Hash Tables)
+# Hash Maps
 A hash map, also known as a hash table, is a data structure that associates keys with values. Each key is hashed to determine its storage location, and the associated value is stored at that location. Hash maps are widely used for efficient data retrieval and storage, with keys serving as unique identifiers.
 
 ## Key Characteristics
