@@ -4,6 +4,7 @@
 - [Big O Notation](#big-o-notation)
 - [Sorting](#sorting)
 - [Searching](#searching)
+- [Strings](#strings)
 
 ## Big O Notation
 Big O Notation is a mathematical notation used in computer science and algorithm analysis to describe the upper bound or worst-case time complexity of an algorithm. It provides a way to classify algorithms based on how their execution time grows in relation to the size of the input data. Understanding Big O Notation is crucial for evaluating algorithm efficiency and making informed decisions when choosing algorithms for specific tasks.
@@ -267,4 +268,181 @@ def binary_search(arr, target):
         else:
             high = mid - 1
     return -1
+```
+
+
+## Strings
+String algorithms are specialized algorithms used for processing and manipulating strings, which are sequences of characters. These algorithms are crucial in various applications, such as text processing, pattern matching, and data parsing. This section explores different string algorithms, their characteristics, and use cases.
+
+### Knuth-Morris-Pratt (KMP) Algorithm
+The Knuth-Morris-Pratt (KMP) Algorithm is used for substring searching within a longer string. It efficiently finds all occurrences of a substring by avoiding unnecessary character comparisons.
+
+#### Key Characteristics
+1. Efficiency: The KMP Algorithm achieves a time complexity of O(n + m), where "n" is the length of the text and "m" is the length of the substring to be searched.
+2. Partial Match Table: KMP uses a precomputed partial match table to skip comparisons when a mismatch occurs. This enhances its efficiency.
+
+Use Cases: KMP is suitable for searching substrings within texts, including applications like text editors, search engines, and string pattern matching.
+
+```Python
+def build_partial_match_table(pattern):
+    table = [0] * len(pattern)
+    j = 0
+    for i in range(1, len(pattern)):
+        while j > 0 and pattern[i] != pattern[j]:
+            j = table[j - 1]
+        if pattern[i] == pattern[j]:
+            j += 1
+        table[i] = j
+    return table
+
+def kmp_search(text, pattern):
+    partial_match_table = build_partial_match_table(pattern)
+    matches = []
+    j = 0
+    for i in range(len(text)):
+        while j > 0 and text[i] != pattern[j]:
+            j = partial_match_table[j - 1]
+        if text[i] == pattern[j]:
+            j += 1
+        if j == len(pattern):
+            matches.append(i - j + 1)
+            j = partial_match_table[j - 1]
+    return matches
+```
+
+### Boyer-Moore Algorithm
+The Boyer-Moore Algorithm is another efficient substring searching algorithm. It uses a "bad character" and "good suffix" rule to skip unnecessary comparisons.
+
+#### Key Characteristics
+1. Efficiency: The Boyer-Moore Algorithm achieves a time complexity of O(n + m) in practice. It is known for its speed in practical applications.
+2. Heuristic Rules: Boyer-Moore uses heuristic rules to skip comparisons based on the last occurrence of characters in the substring and the text.
+
+Use Cases: Boyer-Moore is widely used for searching substrings in text processing, including searching in large documents and string matching.
+
+```Python
+def build_bad_character_table(pattern):
+    table = {}
+    for i in range(len(pattern) - 1):
+        table[pattern[i]] = len(pattern) - 1 - i
+    return table
+
+def build_good_suffix_table(pattern):
+    m = len(pattern)
+    suffix_table = [-1] * m
+    j = 0
+    for i in range(m - 1, -1, -1):
+        if is_suffix(pattern, i + 1):
+            j = m - 1 - i
+        suffix_table[i] = j
+    return suffix_table
+
+def is_suffix(pattern, p):
+    j = len(pattern) - 1
+    for i in range(p, -1, -1):
+        if pattern[i] != pattern[j]:
+            return False
+        j -= 1
+    return True
+
+def boyer_moore_search(text, pattern):
+    bad_character_table = build_bad_character_table(pattern)
+    good_suffix_table = build_good_suffix_table(pattern)
+    matches = []
+    i = 0
+    while i <= len(text) - len(pattern):
+        j = len(pattern) - 1
+        while j >= 0 and pattern[j] == text[i + j]:
+            j -= 1
+        if j < 0:
+            matches.append(i)
+            i += good_suffix_table[0]
+        else:
+            i += max(bad_character_table.get(text[i + j], 0), good_suffix_table[j])
+    return matches
+```
+
+### String Reversal
+String reversal is a common string manipulation task that involves reversing the order of characters in a string.
+
+#### Key Characteristics
+1. Efficiency: String reversal can be achieved with a time complexity of O(n), where "n" is the length of the string.
+2. In-Place vs. Out-of-Place: String reversal can be done in-place (modifying the original string) or out-of-place (creating a new reversed string).
+
+Use Cases: String reversal is useful in various applications, including text processing, cryptography, and data transformation.
+
+```Python
+def reverse_string(input_string):
+    return input_string[::-1]
+```
+
+### String Concatenation
+String concatenation involves combining two or more strings into a single string.
+
+#### Key Characteristics
+1. Efficiency: The time complexity of string concatenation depends on the implementation. In most cases, it is O(n), where "n" is the total length of the strings being concatenated.
+2. In-Place vs. Out-of-Place: Some string concatenation methods modify the original string (in-place), while others create a new string (out-of-place).
+
+Use Cases: String concatenation is essential for building longer strings from smaller components, such as in text generation, logging, and data serialization.
+
+```Python
+def concatenate_strings(strings):
+    return ''.join(strings)
+
+# Example usage
+string_list = ['abc', 'def']
+result = concatenate_strings(string_list)
+print(result)  # Output: 'abcdef'
+```
+
+```Python
+s = 'abc'
+t = 'def'
+result = s + t
+print(result)  # Output: 'abcdef'
+```
+
+### Regular Expressions
+Regular expressions (regex) are a powerful tool for string matching and pattern recognition. They allow you to define search patterns and perform complex string manipulations.
+
+#### Key Characteristics
+1. Versatility: Regular expressions support a wide range of string matching and manipulation tasks, from simple substring searches to complex pattern extractions.
+2. Pattern Language: Regular expressions use a pattern language to specify search patterns, making them highly flexible.
+3. Efficiency: The efficiency of regular expressions can vary based on the complexity of the pattern. Simple patterns can be matched quickly, but complex patterns may require more processing time.
+
+Use Cases: Regular expressions are used in text processing, data validation, web scraping, and many other applications that involve string matching.
+
+```Python
+import re
+
+# Example of using regular expressions
+text = "Hello, my email is example@email.com"
+pattern = r'\S+@\S+'
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['example@email.com']
+```
+
+### Rabin-Karp Algorithm
+The Rabin-Karp Algorithm is a string matching algorithm that uses hashing to find occurrences of a pattern in a text efficiently.
+
+#### Key Characteristics
+1. Efficiency: Rabin-Karp has an average-case time complexity of O(n + m), where "n" is the length of the text and "m" is the length of the pattern. It is particularly efficient for large texts and patterns.
+2. Hashing: Rabin-Karp uses rolling hashing to compute hash values for the text and the pattern. This allows for quick comparisons and shifts.
+
+Use Cases: Rabin-Karp is used for pattern matching in text processing, plagiarism detection, and substring searching.
+
+```Python
+def rabin_karp_search(text, pattern):
+    n = len(text)
+    m = len(pattern)
+    pattern_hash = hash(pattern)
+    text_hash = hash(text[:m])
+    matches = []
+
+    for i in range(n - m + 1):
+        if text_hash == pattern_hash and text[i:i + m] == pattern:
+            matches.append(i)
+        if i < n - m:
+            text_hash = (text_hash - ord(text[i])) // 256 + ord(text[i + m]) * (256 ** (m - 1))
+
+    return matches
 ```
