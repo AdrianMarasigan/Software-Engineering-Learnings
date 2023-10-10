@@ -31,8 +31,6 @@ I have 5 years years of experience in technical project management, product mana
 
 Prior to my software engineering journey, I worked in healthcare and pharmaceuticals. My shift to software development started when I spearheaded the requirements for an inventory management system, where I collaborated with 13 organizations on understanding how they captured data and worked with the development team to build a data model and document requirements.
 
-## Highlight Projects
-
 ## My Learnings
 This section contains the topics that I've covered. Each topic has a link where you can dive into documentation I've created on each topic area.
 
@@ -46,4 +44,4 @@ This section contains the topics that I've covered. Each topic has a link where 
 ### [DevOPs and Deployment](https://github.com/c0olade/Software-Engineering-Journey/tree/main/DevOPs%20and%20Deployment)
 ### [Machine Learning](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Machine%20Learning)
 ### [AI](https://github.com/c0olade/Software-Engineering-Journey/tree/main/AI)
-- [AES 256 Encryption and Decryption Algorithm](https://github.com/c0olade/python-mini_projects/tree/main/mini-projects/AES%20256%20encryption%20and%20decryption%20using%20Python#aes-256-encryption-and-decryption-using-python)
+### [Cybersecurity](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Cybersecurity)
