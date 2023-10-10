@@ -9,7 +9,6 @@ Prior to my software engineering journey, I worked in healthcare and pharmaceuti
 Feel free to check out my [Linkedin](www.linkedin.com/in/adrian-marasigan).
 
 ## Highlight Projects
-My focus right now is fundamental learning of topics and small projects. Please reference the Table of Contents to see where I am with my learning.
 
 ## Table of Contents
 ### [Programming Languages](Link)
@@ -23,26 +22,8 @@ My focus right now is fundamental learning of topics and small projects. Please 
 - [SQL](Link)
 - [Go](Link)
 - [C++](Link)
-### [Data Structures](Link)
-- [Arrays](Link)
-- [Linked Lists](Link)
-- [Stacks and Queues](Link)
-- [Hash Sets](Link)
-- [Hash Maps (Hash Tables)](Link)
-- [Trees](Link)
-- [Graphs](Link)
-- [Tries](Link)
-### [Algorithms](Link)
-- [Big O Notation](Link)
-- [Sorting](Link)
-- [Searching](Link)
-- [String](Link)
-- [Divide and Conquer](Link)
-- [Recursion & Backtracking](Link)
-- [Greedy Algorithms](Link)
-- [Dynamic Programming](Link)
-- [Tree Traversals](Link)
-- [Graph Algorithms](Link)
+### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/blob/main/README.md)
+### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
 ### [Object Oriented Programming](Link)
 - [Class](Link)
 - [Object](Link)
