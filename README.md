@@ -1,6 +1,16 @@
 # Software Engineering Journey
 This repository is a record of my Software Engineering journey. It contains my highlighted projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
 
+## Projects:
+- [Backend Web Service Application](https://github.com/c0olade/Good-Bank)
+  - PostgreSQL for DB
+  - Go using Gin framework to build web services
+  - Build app with Docker and deploy to a production Kubernetes cluster on AWS
+- [AES 256 encryption and decryption using Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/AES%20256%20encryption%20and%20decryption%20using%20Python)
+  - Python script demonstrates AES-256 encryption and decryption using the pycryptodome library
+- [Python Chatbot](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Python%20Chatbot)
+  - Simple AI chatbot created using Python, Flask, and the ChatterBot library
+
 ## About Me
 I have 5 years years of experience in technical project management, product management, and application support. While the work was fulfilling, these roles gradually built my passion for building software before I decided to dedicate my efforts full-time to becoming a software eningeer.
 
@@ -11,17 +21,17 @@ Feel free to check out my [Linkedin](www.linkedin.com/in/adrian-marasigan).
 ## Highlight Projects
 
 ## Table of Contents
-### [Programming Languages](Link)
-- [Python](Link)
-  - [Flask](Link)
-  - [Pandas](Link)
-  - [Tensorflow](Link)
-- [Javascript](Link)
-  - [React](Link)
-  - [Node.js](Link)
-- [SQL](Link)
-- [Go](Link)
-- [C++](Link)
+### Programming Languages
+- Python
+  - Flask
+  - Pandas
+  - Tensorflow
+- Javascript
+  - React
+  - Node.js
+- SQL
+- Go
+- C++
 ### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Data%20Structures)
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
 ### [Object Oriented Programming](Link)
