@@ -22,7 +22,7 @@ Feel free to check out my [Linkedin](www.linkedin.com/in/adrian-marasigan).
 - [SQL](Link)
 - [Go](Link)
 - [C++](Link)
-### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/blob/main/README.md)
+### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Data%20Structures)
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
 ### [Object Oriented Programming](Link)
 - [Class](Link)
