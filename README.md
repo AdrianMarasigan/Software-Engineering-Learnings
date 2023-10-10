@@ -34,11 +34,7 @@ Prior to my software engineering journey, I worked in healthcare and pharmaceuti
 ## Table of Contents
 ### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Data%20Structures)
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
-### [Object Oriented Programming](Link)
-- [Class](Link)
-- [Object](Link)
-- [Methods](Link)
-- [Pillars of OOP](Link)
+### [Object Oriented Programming](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Objected%20Oriented%20Programming)
 ### [Version Control](Link)
 ### [Testing and Test-Driven Development (TDD)](Link)
 ### [Cloud Computing and Serverless](Link)
