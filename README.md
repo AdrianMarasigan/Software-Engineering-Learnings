@@ -31,7 +31,9 @@ Prior to my software engineering journey, I worked in healthcare and pharmaceuti
 
 ## Highlight Projects
 
-## Table of Contents
+## My Learnings
+This section contains the topics that I've covered. Each topic has a link where you can dive into documentation I've created on each topic area.
+
 ### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Data%20Structures)
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
 ### [Object Oriented Programming](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Objected%20Oriented%20Programming)
