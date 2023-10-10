@@ -11,6 +11,19 @@ This repository is a record of my Software Engineering journey. It contains my h
 - [Python Chatbot](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Python%20Chatbot)
   - Simple AI chatbot created using Python, Flask, and the ChatterBot library
 
+## Programming Languages
+- Python
+  - Flask
+  - Pandas
+  - Tensorflow
+- Javascript
+  - React
+  - Node.js
+- Go
+- SQL
+- HTML
+- CSS
+
 ## About Me
 I have 5 years years of experience in technical project management, product management, and application support. While the work was fulfilling, these roles gradually built my passion for building software before I decided to dedicate my efforts full-time to becoming a software eningeer.
 
@@ -19,17 +32,6 @@ Prior to my software engineering journey, I worked in healthcare and pharmaceuti
 ## Highlight Projects
 
 ## Table of Contents
-### Programming Languages
-- Python
-  - Flask
-  - Pandas
-  - Tensorflow
-- Javascript
-  - React
-  - Node.js
-- SQL
-- Go
-- C++
 ### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Data%20Structures)
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
 ### [Object Oriented Programming](Link)
