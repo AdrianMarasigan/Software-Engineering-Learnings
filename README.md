@@ -2,7 +2,7 @@
 This repository is a record of my Software Engineering journey. It contains my highlighted projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
 
 ## Projects:
-- [Backend Web Service Application](https://github.com/c0olade/Good-Bank)
+- [Backend Application using Golang + Postgres + Kubernetes + gRPC](https://github.com/c0olade/Good-Bank)
   - PostgreSQL for DB
   - Go to build web services
   - Build app with Docker and deploy to a production Kubernetes cluster on AWS
