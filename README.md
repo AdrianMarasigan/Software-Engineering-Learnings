@@ -16,6 +16,8 @@ This repository is a record of my Software Engineering journey. It contains my h
   - Flask
   - Pandas
   - Tensorflow
+- Git
+- Bash
 - Javascript
   - React
   - Node.js
@@ -37,7 +39,7 @@ This section contains the topics that I've covered. Each topic has a link where 
 ### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Data%20Structures)
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
 ### [Object Oriented Programming](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Objected%20Oriented%20Programming)
-### [Version Control](Link)
+### [Version Control](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Version%20Control)
 ### [Testing and Test-Driven Development (TDD)](Link)
 ### [Cloud Computing and Serverless](Link)
 ### [API Development](Link)
