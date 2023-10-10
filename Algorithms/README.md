@@ -453,11 +453,17 @@ def rabin_karp_search(text, pattern):
 ```
 
 ## Divide and Conquer
-Divide and Conquer is a fundamental algorithmic technique that involves breaking down a complex problem into smaller, more manageable subproblems, solving these subproblems independently, and then combining their solutions to solve the original problem. This section explores different Divide and Conquer Algorithms, their characteristics, and use cases.
+Divide and Conquer is a fundamental algorithmic technique that involves breaking down a complex problem into smaller, more manageable subproblems, solving these subproblems independently, and then combining their solutions to solve the original problem.
 
-Divide and Conquer algorithms follow a three-step process: Divide, Conquer, and Combine. These algorithms are particularly effective when a problem can be divided into smaller, similar subproblems that can be solved independently.
+- Divide: The first step involves dividing the problem into smaller, similar subproblems.
+- Conquer: Next, each subproblem is solved independently.
+- Combine: Finally, the solutions of the subproblems are combined to solve the original problem.
 
-You can refer to Merge Sort and Quick Sort above for examples of this.
+This approach is particularly effective when a problem can be divided into smaller, similar subproblems that can be solved independently.
+
+Examples:
+
+Two common examples of Divide and Conquer algorithms are Merge Sort and Quick Sort. Merge Sort divides an array into smaller subarrays, sorts them individually, and then merges them to obtain the sorted array. Quick Sort, on the other hand, partitions the array into smaller sections and recursively sorts them. You can review the implementations for these in the sorting section.
 
 ## Recursive and Backtracking
 Recursive algorithms are algorithms that solve problems by breaking them down into smaller, self-similar subproblems. Backtracking algorithms are a subset of recursive algorithms that systematically explore all possible solutions to a problem and backtrack when a solution is not feasible. This section explores different Recursive and Backtracking Algorithms, their characteristics, and use cases.
