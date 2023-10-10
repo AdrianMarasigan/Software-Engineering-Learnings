@@ -40,7 +40,7 @@ This section contains the topics that I've covered. Each topic has a link where 
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Algorithms)
 ### [Object Oriented Programming](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Objected%20Oriented%20Programming)
 ### [Version Control](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Version%20Control)
-### [Testing and Test-Driven Development (TDD)](Link)
+### [Testing and Test-Driven Development (TDD)](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Testing%20and%20Test-Driven%20Development)
 ### [Cloud Computing and Serverless](Link)
 ### [API Development](Link)
 ### [Data Science and Machine Learning](Link)
