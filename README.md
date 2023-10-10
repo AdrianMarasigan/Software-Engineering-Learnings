@@ -4,7 +4,7 @@ This repository is a record of my Software Engineering journey. It contains my h
 ## Projects:
 - [Backend Web Service Application](https://github.com/c0olade/Good-Bank)
   - PostgreSQL for DB
-  - Go using Gin framework to build web services
+  - Go to build web services
   - Build app with Docker and deploy to a production Kubernetes cluster on AWS
 - [AES 256 encryption and decryption using Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/AES%20256%20encryption%20and%20decryption%20using%20Python)
   - Python script demonstrates AES-256 encryption and decryption using the pycryptodome library
