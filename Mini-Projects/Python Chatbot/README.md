@@ -25,6 +25,3 @@ python app.py
 - The chatbot will respond to your message, and the conversation will appear in the chatbox.
 - You can continue the conversation by sending more messages.
 - To stop the application, press Ctrl+C in the terminal where the Flask app is running.
-
-# Customization
-You can customize the chatbot's training data and responses by modifying the code in app.py. You can add your own datasets or language support.
