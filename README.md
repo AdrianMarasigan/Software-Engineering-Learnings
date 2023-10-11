@@ -32,7 +32,7 @@ I have 5 years years of experience in technical project management, product mana
 Prior to my software engineering journey, I worked in healthcare and pharmaceuticals. My shift to software development started when I spearheaded the requirements for an inventory management system, where I collaborated with 13 organizations on understanding how they captured data and worked with the development team to build a data model and document requirements.
 
 ## My Learnings
-This section contains the topics that I've covered. Each topic has a link where you can dive into documentation I've created on each topic area.
+This section contains a list of topics that I've covered and documented.
 
 ### [Data Structures](https://github.com/c0olade/Software-Engineering-Journey/tree/main/My%20Learnings/Data%20Structures)
 ### [Algorithms](https://github.com/c0olade/Software-Engineering-Journey/tree/main/My%20Learnings/Algorithms)
