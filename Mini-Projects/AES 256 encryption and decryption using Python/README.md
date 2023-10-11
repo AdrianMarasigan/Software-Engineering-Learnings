@@ -1,7 +1,7 @@
 # AES 256 encryption and decryption using Python
 
 ## Purpose:
-The primary purpose of this script is to provide a practical example of AES encryption and decryption in Python. You can use this script to protect sensitive data by encrypting it with a strong password.
+The primary purpose of this script is to provide a practical example of AES encryption and decryption in Python.
 
 ## How Does AES 256 Work?
 The AES Encryption algorithm (also known as the Rijndael algorithm) is a symmetric block cipher algorithm with a block/chunk size of 128 bits. It converts these individual blocks using keys of 128, 192, and 256 bits. Once it encrypts these blocks, it joins them together to form the ciphertext. 
