@@ -1,7 +1,9 @@
 # AES 256 encryption and decryption using Python
 
 ## Overview:
-This Python script demonstrates AES-256 encryption and decryption using the pycryptodome library. AES (Advanced Encryption Standard) is a widely used symmetric encryption algorithm that provides secure encryption and decryption of data. This script allows you to encrypt and decrypt messages with ease, and it includes enhanced features for testing and usability.
+AES (Advanced Encryption Standard) is a widely used symmetric encryption algorithm that provides secure encryption and decryption of data.
+
+This Python script demonstrates AES-256 encryption and decryption using the pycryptodome library.  This script allows you to encrypt and decrypt messages with ease, and it includes enhanced features for testing and usability.
 
 ## How Does AES 256 Work?
 
