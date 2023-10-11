@@ -40,16 +40,129 @@ class ClassName:
 ## The Four Pillars of OOP
 Object-Oriented Programming is based on four fundamental principles, often referred to as the "Four Pillars of OOP." These principles are:
 
-1. Encapsulation
+### Encapsulation
 Encapsulation is the concept of bundling data (attributes) and methods (functions) that operate on that data into a single unit (a class). It helps protect the internal state of an object by controlling access to its attributes.
 
-2. Inheritance
+```Python
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_age(self):
+        return self.age
+
+    def set_age(self, new_age):
+        if new_age > 0:
+            self.age = new_age
+
+# Creating an object
+student1 = Student("Alice", 20)
+
+# Accessing attributes and methods
+print(student1.name)        # Accessing attribute
+print(student1.get_age())   # Accessing age using a method
+student1.set_age(21)       # Modifying age using a method
+```
+
+In the above example, the Student class encapsulates data (name and age) and provides methods (get_age and set_age) to control access to the age attribute. Encapsulation ensures that the age attribute is not directly modified inappropriately.
+
+### Inheritance
 Inheritance allows a new class (subclass or derived class) to inherit properties and behaviors from an existing class (superclass or base class). It promotes code reusability and hierarchy in class structures.
+
+```Python
+class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+# Creating objects
+dog = Dog()
+cat = Cat()
+
+# Calling the speak method
+print(dog.speak())  # Output: "Woof!"
+print(cat.speak())  # Output: "Meow!"
+```
+
+In this example, both the Dog and Cat classes inherit the speak method from the base class Animal. This demonstrates code reuse through inheritance.
 
 3. Polymorphism
 Polymorphism enables objects of different classes to be treated as objects of a common base class. It allows for flexibility and dynamic behavior based on the actual class of an object. Polymorphism can be achieved through method overriding and method overloading.
 
-4. Abstraction
+```Python
+class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+class Parrot(Animal):
+    def speak(self):
+        return "Squawk!"
+
+# Creating a list of animals
+animals = [Dog(), Cat(), Parrot()]
+
+# Polymorphic behavior: Calling the speak method on different animals
+for animal in animals:
+    print(animal.speak())
+
+```
+
+In this example, we have a hierarchy of animal classes with a speak method. We create a list of different animals (instances of Dog, Cat, and Parrot classes), and then we use polymorphism to call the speak method on each animal. This demonstrates that objects of different classes can be treated as objects of a common base class, and their behavior is determined by their specific class, showcasing polymorphism.
+
+5. Abstraction
 Abstraction simplifies complex systems by highlighting only the relevant details and hiding unnecessary complexities. It provides a high-level view of an object or class and focuses on what an object does rather than how it does it.
+
+```Python
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
+    @abstractmethod
+    def stop(self):
+        pass
+
+class Car(Vehicle):
+    def start(self):
+        print("Car started")
+
+    def stop(self):
+        print("Car stopped")
+
+class Bike(Vehicle):
+    def start(self):
+        print("Bike started")
+
+    def stop(self):
+        print("Bike stopped")
+
+# Creating objects
+car = Car()
+bike = Bike()
+
+# Using abstraction to start and stop vehicles
+car.start()
+car.stop()
+bike.start()
+bike.stop()
+```
 
 These four pillars of OOP help create efficient, modular, and maintainable code, making OOP a powerful paradigm for software development.
