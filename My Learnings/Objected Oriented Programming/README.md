@@ -1,6 +1,7 @@
 # Object-Oriented Programming (OOP)
+Object-Oriented Programming (OOP) is a programming paradigm that organizes and models real-world entities as objects. For example, in a simulation of a zoo, animals like lions, elephants, and zebras can be represented as objects. 
 
-Object-Oriented Programming (OOP) is a programming paradigm that organizes and models real-world entities as objects. In OOP, objects are instances of classes, which serve as blueprints for creating these objects. OOP promotes the use of encapsulation, inheritance, polymorphism, and abstraction to design and structure software.
+In OOP, objects are instances of classes, which serve as blueprints for creating these objects. Think of a class as a template for creating objects. For instance, the class 'Animal' can be the blueprint for creating individual animal objects, each with its own unique characteristics.
 
 ## Classes
 
