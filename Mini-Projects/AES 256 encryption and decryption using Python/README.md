@@ -1,23 +1,21 @@
 # AES 256 encryption and decryption using Python
 
-## Overview:
-AES (Advanced Encryption Standard) is a widely used symmetric encryption algorithm that provides secure encryption and decryption of data.
-
-This Python script demonstrates AES-256 encryption and decryption using the pycryptodome library.  This script allows you to encrypt and decrypt messages with ease, and it includes enhanced features for testing and usability.
+## Purpose:
+The primary purpose of this script is to provide a practical example of AES encryption and decryption in Python. You can use this script to protect sensitive data by encrypting it with a strong password.
 
 ## How Does AES 256 Work?
+The AES Encryption algorithm (also known as the Rijndael algorithm) is a symmetric block cipher algorithm with a block/chunk size of 128 bits. It converts these individual blocks using keys of 128, 192, and 256 bits. Once it encrypts these blocks, it joins them together to form the ciphertext. 
 
-AES operates on blocks of data and supports key sizes of 128, 192, and 256 bits. AES 256-bit encryption is the most secure variant of AES and provides a very high level of security.
+AES encryption works by applying a series of mathematical operations to input data, along with a secret key, to transform the data into a ciphertext that is difficult to decipher without the correct key. The security of AES is based on the strength of its key expansion and the complexity of its substitution and permutation operations in the encryption rounds.
 
 ### Key Expansion
-
 The first step in AES 256 encryption is to expand the user-provided 256-bit encryption key into a set of round keys. This process involves performing mathematical operations on the key to generate a series of round keys that will be used in the encryption and decryption rounds.
 
 ### Initial Round
-
-AES consists of multiple rounds, each consisting of four main transformations: SubBytes, ShiftRows, MixColumns, and AddRoundKey. In the initial round, the plaintext data is XORed (bitwise exclusive OR) with the first round key.
+The data is divided into blocks, and the initial round of transformation is performed on the data. This includes a key addition where each byte in the block is XORed with the corresponding byte in the round key.
 
 ### Main Rounds
+AES uses multiple rounds of transformation, with the number of rounds depending on the key length. For a 128-bit key, it uses 10 rounds; for a 192-bit key, it uses 12 rounds; and for a 256-bit key, it uses 14 rounds.
 
 In the main rounds, the plaintext block goes through a series of transformations:
 
@@ -27,7 +25,6 @@ In the main rounds, the plaintext block goes through a series of transformations
 - **AddRoundKey:** The current round key is XORed with the block.
 
 ### Final Round
-
 In the final round, the SubBytes and ShiftRows transformations are applied as usual, but the MixColumns transformation is omitted. The AddRoundKey operation is performed using the final round key.
 
 ### Output
@@ -44,10 +41,6 @@ Some key points to note about AES 256 encryption:
 - AES encryption and decryption are highly efficient and can be implemented in hardware and software.
 
 Overall, AES 256 is a robust encryption algorithm that plays a crucial role in securing sensitive data in many modern computing systems.
-
-
-## Purpose:
-The primary purpose of this script is to provide a practical example of AES encryption and decryption in Python. You can use this script to protect sensitive data by encrypting it with a strong password. The recent updates have improved user interaction and testing capabilities.
 
 ## Walkthrough of the Code:
 1. **Imports and Dependencies:** The script starts by importing necessary libraries, including hashlib, base64, os, and pycryptodome modules.
