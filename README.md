@@ -29,7 +29,7 @@ This repository is a record of my Software Engineering journey. It contains my s
 ## About Me
 I have 5 years years of experience in technical project management, product management, and application support. While the work was fulfilling, these roles gradually built my passion for building software before I decided to dedicate my efforts full-time to becoming a software eningeer.
 
-Prior to my software engineering journey, I worked in healthcare and pharmaceuticals. My shift to software development started when I spearheaded the requirements for an inventory management system, where I collaborated with 13 organizations on understanding how they captured data and worked with the development team to build a data model and document requirements.
+Prior to my software engineering journey, I worked in healthcare and pharmaceuticals. My shift to software development started when I spearheaded the requirements for an inventory management system, where I collaborated with 13 organizations on understanding how they captured data and worked with the development team to build a data model and document requirements. 
 
 ## My Learnings
 This section contains a list of topics that I've covered and documented.
