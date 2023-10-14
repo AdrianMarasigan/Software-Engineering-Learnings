@@ -1,5 +1,5 @@
 # Software Engineering Journey
-This repository is a record of my Software Engineering journey. It contains my highlighted projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
+This repository is a record of my Software Engineering journey. It contains my some of my projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
 
 ## Projects:
 - [Backend Application using Golang + Postgres + Kubernetes + gRPC](https://github.com/c0olade/Good-Bank)
