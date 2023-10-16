@@ -181,7 +181,7 @@ if __name__ == "__main__":
     framepersecond_clock = pygame.time.Clock()
 
     # Sets the title on top of game window
-    pygame.display.set_caption('Flappy Bird Game')
+    pygame.display.set_caption('Flappy Bird Clone')
 
     # Load all the images which we will use in the game
 
@@ -208,7 +208,7 @@ if __name__ == "__main__":
         pipeimage).convert_alpha(), 180), pygame.image.load(
         pipeimage).convert_alpha())
 
-    print("WELCOME TO THE FLAPPY BIRD GAME")
+    print("WELCOME TO THE FLAPPY BIRD Clone")
     print("Press space or enter to start the game")
 
     # Here starts the main game
