@@ -1,10 +1,7 @@
 # Flappy Bird Game
+This is a Python implementation of the classic Flappy Bird game using the Pygame library. In this game, you control a bird and try to navigate it through a series of pipes without crashing into them. Your score increases as you successfully pass through the pipes. 
 
-This is a Python implementation of the classic Flappy Bird game using the Pygame library. In this game, you control a bird and try to navigate it through a series of pipes without crashing into them. Your score increases as you successfully pass through the pipes. The game includes the following files:
-
-- `app.py`: The main Python script for the game.
-- `images/`: A folder containing the images used in the game.
-- `requirements.txt`: A file specifying the required library (Pygame) and its version.
+![Floppy Bird Clone Screenshot](https://github.com/c0olade/Software-Engineering-Journey/blob/main/Mini-Projects/Floppy%20Bird%20Clone/images/image_for_md.png)
 
 ## How to Play
 
@@ -20,8 +17,9 @@ This is a Python implementation of the classic Flappy Bird game using the Pygame
     python app.py
     ```
 3. Game Controls:
- - Use the Spacebar or Up Arrow Key to make the bird flap its wings and gain altitude.
- - The objective is to pass the bird through the gaps between the pipes.
+   ```
+   Use the Spacebar or Up Arrow Key to make the bird flap its wings and gain altitude.
+   ```
 
 4. Scoring: Your score increases every time you pass through a set of pipes. Try to get the highest score possible!
 
