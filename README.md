@@ -12,6 +12,8 @@ This repository is a record of my Software Engineering journey. It contains my s
   - Python script demonstrates AES-256 encryption and decryption using the pycryptodome library
 - [Python Chatbot](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Python%20Chatbot)
   - Simple AI chatbot created using Python, Flask, and the ChatterBot library
+- [Visualize Sorting Algorithms in Python ](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Sorting%20Algorithm%20Visualizations)
+  - Python implementation to visualize sorting algorithms using the matplotlib library.
 
 ## Programming Languages
 - Python
