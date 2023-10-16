@@ -1,10 +1,9 @@
-# Import necessary modules
 import random
 import sys
 import pygame
 from pygame.locals import *
 
-# Define game window dimensions
+# Game window dimensions
 window_width = 600
 window_height = 499
 
@@ -58,14 +57,22 @@ def flappygame():
     bird_flapped = False
 
     while True:
+        # Iterate through the list of events that have occurred
         for event in pygame.event.get():
+            # Check if the event type is a window close event (e.g., clicking the 'X' button)
             if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
-                pygame.quit()
-                sys.exit()
+                # If the window close event is detected, exit the game
+                pygame.quit()  # Terminate the Pygame engine
+                sys.exit()  # Terminate the script
+
+            # Check if the event type is a key press event
             if event.type == KEYDOWN and (event.key == K_SPACE or event.key == K_UP):
+                # If the player presses the spacebar or the up arrow key
                 if vertical > 0:
+                    # Check if the bird's vertical position is above the screen (not at the top)
+                    # Set the bird's vertical velocity to flap upwards
                     bird_velocity_y = bird_flap_velocity
-                    bird_flapped = True
+                    bird_flapped = True  # Mark that the bird has flapped
 
         # Check if the game is over
         game_over = isGameOver(horizontal, vertical, up_pipes, down_pipes)
