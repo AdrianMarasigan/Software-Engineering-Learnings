@@ -26,7 +26,3 @@ This is a Python implementation of the classic Flappy Bird game using the Pygame
 5. Game Over: The game ends when the bird crashes into the ground or one of the pipes.
 
 6. Restart the Game: To restart the game, press Spacebar or Up Arrow Key again.
-
-
-Some terms to be aware of in the file:
-blit: stands for "block transfer" and refers to the process of copying one image (or portion of an image) onto another.
