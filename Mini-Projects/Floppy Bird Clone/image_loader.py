@@ -2,8 +2,7 @@ import pygame
 
 
 class ImageLoader:
-    def __init__(self, config):
-        self.config = config
+    def __init__(self):
         self.game_images = {}
 
     def load_images(self, config):
