@@ -141,7 +141,7 @@ def flappy_game():
 
         # Refresh the game window and display the score
         pygame.display.update()
-        framepersecond_clock.tick(framepersecond)
+        fps_clock.tick(framepersecond)
 
 # Function to check if the game is over
 
@@ -184,7 +184,7 @@ if __name__ == "__main__":
     pygame.init()  # Initialize pygame
 
     # Initialize the Pygame clock for controlling frame rate
-    framepersecond_clock = pygame.time.Clock()
+    fps_clock = pygame.time.Clock()
 
     # Set the title on top of the game window
     pygame.display.set_caption('Flappy Bird Clone')
@@ -222,7 +222,7 @@ if __name__ == "__main__":
         pipeimage).convert_alpha(), 180), pygame.image.load(
         pipeimage).convert_alpha())
 
-    print("Flappy Bird Clone has started!")
+    print("Flappy Bird Clone can now be played!")
     print("Press the spacebar or the up key to start the game")
 
     # Main game loop
@@ -251,4 +251,4 @@ if __name__ == "__main__":
                                 (horizontal, vertical))
                     window.blit(game_images['sea_level'], (ground, elevation))
                     pygame.display.update()
-                    framepersecond_clock.tick(framepersecond)
+                    fps_clock.tick(framepersecond)
