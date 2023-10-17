@@ -5,13 +5,13 @@ from pygame.locals import *
 
 # Game window dimensions
 window_width = 600
-window_height = 499
+window_height = 600
 
 # Initialize the game window
 window = pygame.display.set_mode((window_width, window_height))
 elevation = window_height * 0.8  # Set the elevation for the ground
 game_images = {}  # Dictionary to store game images
-framepersecond = 32  # Frames per second for the game
+fps = 32  # Frames per second for the game
 pipeimage = 'images/pipe.png'  # Path to the pipe image
 background_image = 'images/background.jpg'  # Path to the background image
 birdplayer_image = 'images/bird.png'  # Path to the bird player image
@@ -74,7 +74,7 @@ def flappy_game():
                     bird_velocity_y = bird_flap_velocity
                     bird_flapped = True  # Mark that the bird has flapped
 
-        # Check if the game is over
+        # Check for is_game_over
         game_over = is_game_over(horizontal, vertical, up_pipes, down_pipes)
         if game_over:
             return
@@ -131,17 +131,17 @@ def flappy_game():
         # Find the width of score images from numbers
         for num in numbers:
             width += game_images['scoreimages'][num].get_width()
-        Xoffset = (window_width - width) / 1.1
+        x_offset = (window_width - width) / 1.1
 
         # Blit the score images on the window
         for num in numbers:
             window.blit(game_images['scoreimages'][num],
-                        (Xoffset, window_width * 0.02))
-            Xoffset += game_images['scoreimages'][num].get_width()
+                        (x_offset, window_width * 0.02))
+            x_offset += game_images['scoreimages'][num].get_width()
 
         # Refresh the game window and display the score
         pygame.display.update()
-        fps_clock.tick(framepersecond)
+        fps_clock.tick(fps)
 
 # Function to check if the game is over
 
@@ -251,4 +251,4 @@ if __name__ == "__main__":
                                 (horizontal, vertical))
                     window.blit(game_images['sea_level'], (ground, elevation))
                     pygame.display.update()
-                    fps_clock.tick(framepersecond)
+                    fps_clock.tick(fps)
