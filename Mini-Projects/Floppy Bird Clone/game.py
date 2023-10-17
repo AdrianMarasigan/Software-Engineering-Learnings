@@ -8,16 +8,6 @@ class FlappyBirdGame:
     def __init__(self, config, image_loader):
         self.config = config
         self.image_loader = image_loader
-
-        # Initialize the game window dimensions and other settings
-        self.window_width = 600
-        self.window_height = 600
-        self.elevation = self.window_height * 0.8
-        self.fps = 32
-        self.pipeimage = 'images/pipe.png'
-        self.background_image = 'images/background.jpg'
-        self.birdplayer_image = 'images/bird.png'
-        self.sealevel_image = 'images/base.jfif'
         self.game_images = {}
 
     def initialize_game(self):
@@ -28,10 +18,6 @@ class FlappyBirdGame:
         pygame.display.set_caption('Flappy Bird Clone')
         self.image_loader.load_images(self.config)
         self.game_images = self.image_loader.game_images
-        self.fps_clock = pygame.time.Clock()
-        self.window = pygame.display.set_mode(
-            (self.window_width, self.window_height))
-        pygame.display.set_caption('Flappy Bird Clone')
 
     def run(self):
         self.initialize_game()
@@ -39,9 +25,9 @@ class FlappyBirdGame:
             self.start_game_loop()
 
     def start_game_loop(self):
-        horizontal = int(self.window_width / 5)
+        horizontal = int(self.config.window_width / 5)
         vertical = int(
-            (self.window_height - self.game_images['flappybird'].get_height()) / 2)
+            (self.config.window_height - self.game_images['flappybird'].get_height()) / 2)
         ground = 0
 
         while True:
@@ -56,14 +42,14 @@ class FlappyBirdGame:
                     self.window.blit(
                         self.game_images['flappybird'], (horizontal, vertical))
                     self.window.blit(
-                        self.game_images['sea_level'], (ground, self.elevation))
+                        self.game_images['sea_level'], (ground, self.config.elevation))
                     pygame.display.update()
-                    self.fps_clock.tick(self.fps)
+                    self.fps_clock.tick(self.config.fps)
 
     def flappy_game(self):
         your_score = 0
-        horizontal = int(self.window_width / 5)
-        vertical = int(self.window_width / 2)
+        horizontal = int(self.config.window_width / 5)
+        vertical = int(self.config.window_width / 2)
         ground = 0
         mytempheight = 100
 
@@ -71,17 +57,17 @@ class FlappyBirdGame:
         second_pipe = self.create_pipe()
 
         down_pipes = [
-            {'x': self.window_width + 300 -
+            {'x': self.config.window_width + 300 -
                 mytempheight, 'y': first_pipe[1]['y']},
-            {'x': self.window_width + 300 - mytempheight +
-                (self.window_width / 2), 'y': second_pipe[1]['y']}
+            {'x': self.config.window_width + 300 - mytempheight +
+                (self.config.window_width / 2), 'y': second_pipe[1]['y']}
         ]
 
         up_pipes = [
-            {'x': self.window_width + 300 -
+            {'x': self.config.window_width + 300 -
                 mytempheight, 'y': first_pipe[0]['y']},
-            {'x': self.window_width + 200 - mytempheight +
-                (self.window_width / 2), 'y': second_pipe[0]['y']}
+            {'x': self.config.window_width + 200 - mytempheight +
+                (self.config.window_width / 2), 'y': second_pipe[0]['y']}
         ]
 
         pipe_velocity_x = -4
@@ -133,7 +119,8 @@ class FlappyBirdGame:
 
             playerHeight = self.game_images['flappybird'].get_height()
             vertical = vertical + \
-                min(bird_velocity_y, self.elevation - vertical - playerHeight)
+                min(bird_velocity_y, self.config.elevation -
+                    vertical - playerHeight)
 
             for upperPipe, lowerPipe in zip(up_pipes, down_pipes):
                 upperPipe['x'] += pipe_velocity_x
@@ -156,7 +143,7 @@ class FlappyBirdGame:
                     self.game_images['pipeimage'][1], (lowerPipe['x'], lowerPipe['y']))
 
             self.window.blit(
-                self.game_images['sea_level'], (ground, self.elevation))
+                self.game_images['sea_level'], (ground, self.config.elevation))
             self.window.blit(
                 self.game_images['flappybird'], (horizontal, vertical))
 
@@ -164,22 +151,22 @@ class FlappyBirdGame:
             width = 0
             for num in numbers:
                 width += self.game_images['scoreimages'][num].get_width()
-            x_offset = (self.window_width - width) / 1.1
+            x_offset = (self.config.window_width - width) / 1.1
             for num in numbers:
                 self.window.blit(
-                    self.game_images['scoreimages'][num], (x_offset, self.window_width * 0.02))
+                    self.game_images['scoreimages'][num], (x_offset, self.config.window_width * 0.02))
                 x_offset += self.game_images['scoreimages'][num].get_width()
 
             pygame.display.update()
-            self.fps_clock.tick(self.fps)
+            self.fps_clock.tick(self.config.fps)
 
     def create_pipe(self):
         # Create a pair of pipes with random heights
-        offset = self.window_height / 3
+        offset = self.config.window_height / 3
         pipe_height = self.game_images['pipeimage'][0].get_height()
-        y2 = offset + random.randrange(0, int(self.window_height -
+        y2 = offset + random.randrange(0, int(self.config.window_height -
                                        self.game_images['sea_level'].get_height() - 1.2 * offset))
-        pipe_x = self.window_width + 10
+        pipe_x = self.config.window_width + 10
         y1 = pipe_height - y2 + offset
         pipe = [
             {'x': pipe_x, 'y': -y1},  # Upper Pipe
@@ -189,7 +176,7 @@ class FlappyBirdGame:
 
     def is_game_over(self, horizontal, vertical, up_pipes, down_pipes):
         # Check if the game is over (collision with pipes or ground)
-        if vertical > self.elevation - 25 or vertical < 0:
+        if vertical > self.config.elevation - 25 or vertical < 0:
             return True
         for pipe in up_pipes:
             pipe_height = self.game_images['pipeimage'][0].get_height()
