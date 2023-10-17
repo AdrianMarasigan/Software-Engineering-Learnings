@@ -12,16 +12,11 @@ This repository is a record of my Software Engineering journey. It contains my s
   - Simple AI chatbot created using Python, Flask, and the ChatterBot library
 
 ## Programming Languages
-- Python
-  - Flask
-  - Pandas
-  - Tensorflow
+- Python (Flask)
 - Git
 - Bash
-- Javascript
-  - React
-  - Node.js
-- Go
+- Docker
+- Javascript (React, node.js)
 - SQL
 - HTML
 - CSS
