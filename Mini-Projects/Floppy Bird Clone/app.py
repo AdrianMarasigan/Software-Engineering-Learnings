@@ -20,7 +20,7 @@ sealevel_image = 'images/base.jfif'  # Path to the ground (sea level) image
 # Define the main game function
 
 
-def flappygame():
+def flappy_game():
     your_score = 0
     horizontal = int(window_width / 5)
     vertical = int(window_width / 2)
@@ -46,13 +46,13 @@ def flappygame():
     ]
 
     # Pipe velocity along x
-    pipeVelX = -4
+    pipe_velocity_x = -4
 
     # Bird velocity and parameters
     bird_velocity_y = -9
-    bird_Max_Vel_Y = 10
-    bird_Min_Vel_Y = -8
-    birdAccY = 1
+    bird_max_vel_y = 10
+    bird_min_vel_y = -8
+    bird_vertical_accel = 1
     bird_flap_velocity = -8
     bird_flapped = False
 
@@ -75,21 +75,21 @@ def flappygame():
                     bird_flapped = True  # Mark that the bird has flapped
 
         # Check if the game is over
-        game_over = isGameOver(horizontal, vertical, up_pipes, down_pipes)
+        game_over = is_game_over(horizontal, vertical, up_pipes, down_pipes)
         if game_over:
             return
 
         # Check for your_score
-        playerMidPos = horizontal + game_images['flappybird'].get_width() / 2
+        player_mid_pos = horizontal + game_images['flappybird'].get_width() / 2
         for pipe in up_pipes:
-            pipeMidPos = pipe['x'] + \
+            pipe_mid_pos = pipe['x'] + \
                 game_images['pipeimage'][0].get_width() / 2
-            if pipeMidPos <= playerMidPos < pipeMidPos + 4:
+            if pipe_mid_pos <= player_mid_pos < pipe_mid_pos + 4:
                 your_score += 1
                 print(f"Your your_score is {your_score}")
 
-        if bird_velocity_y < bird_Max_Vel_Y and not bird_flapped:
-            bird_velocity_y += birdAccY
+        if bird_velocity_y < bird_max_vel_y and not bird_flapped:
+            bird_velocity_y += bird_vertical_accel
 
         if bird_flapped:
             bird_flapped = False
@@ -99,8 +99,8 @@ def flappygame():
 
         # Move pipes to the left
         for upperPipe, lowerPipe in zip(up_pipes, down_pipes):
-            upperPipe['x'] += pipeVelX
-            lowerPipe['x'] += pipeVelX
+            upperPipe['x'] += pipe_velocity_x
+            lowerPipe['x'] += pipe_velocity_x
 
         # Add a new pipe when the first is about to cross the leftmost part of the screen
         if 0 < up_pipes[0]['x'] < 5:
@@ -146,13 +146,13 @@ def flappygame():
 # Function to check if the game is over
 
 
-def isGameOver(horizontal, vertical, up_pipes, down_pipes):
+def is_game_over(horizontal, vertical, up_pipes, down_pipes):
     if vertical > elevation - 25 or vertical < 0:
         return True
 
     for pipe in up_pipes:
-        pipeHeight = game_images['pipeimage'][0].get_height()
-        if (vertical < pipeHeight + pipe['y'] and abs(horizontal - pipe['x']) < game_images['pipeimage'][0].get_width()):
+        pipe_height = game_images['pipeimage'][0].get_height()
+        if (vertical < pipe_height + pipe['y'] and abs(horizontal - pipe['x']) < game_images['pipeimage'][0].get_width()):
             return True
 
     for pipe in down_pipes:
@@ -165,16 +165,16 @@ def isGameOver(horizontal, vertical, up_pipes, down_pipes):
 
 def createPipe():
     offset = window_height / 3
-    pipeHeight = game_images['pipeimage'][0].get_height()
+    pipe_height = game_images['pipeimage'][0].get_height()
     y2 = offset + random.randrange(0, int(window_height -
                                    game_images['sea_level'].get_height() - 1.2 * offset))
-    pipeX = window_width + 10
-    y1 = pipeHeight - y2 + offset
+    pipe_x = window_width + 10
+    y1 = pipe_height - y2 + offset
     pipe = [
         # Upper Pipe
-        {'x': pipeX, 'y': -y1},
+        {'x': pipe_x, 'y': -y1},
         # Lower Pipe
-        {'x': pipeX, 'y': y2}
+        {'x': pipe_x, 'y': y2}
     ]
     return pipe
 
@@ -222,8 +222,8 @@ if __name__ == "__main__":
         pipeimage).convert_alpha(), 180), pygame.image.load(
         pipeimage).convert_alpha())
 
-    print("WELCOME TO THE FLAPPY BIRD GAME")
-    print("Press space or enter to start the game")
+    print("Flappy Bird Clone has started!")
+    print("Press the spacebar or the up key to start the game")
 
     # Main game loop
     while True:
@@ -243,7 +243,7 @@ if __name__ == "__main__":
                     sys.exit()
                 # If the user presses space or up key, start the game
                 elif event.type == KEYDOWN and (event.key == K_SPACE or event.key == K_UP):
-                    flappygame()
+                    flappy_game()
                 # If the user doesn't press any key, do nothing
                 else:
                     window.blit(game_images['background'], (0, 0))
