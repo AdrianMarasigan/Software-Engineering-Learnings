@@ -1,6 +1,17 @@
 # Software Engineering Journey
 This repository is a record of my Software Engineering journey. It contains my some of my projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
 
+## Programming Languages
+<a href="https://www.python.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png" alt="python" width="40" height="40"/>
+<a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/240px-Flask_logo.svg.png" alt="flask" width="40" height="40"/>
+<a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/240px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="40" height="40"/>
+<a href="https://learn.microsoft.com/en-us/powershell/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/PowerShell_Core_6.0_icon.png/242px-PowerShell_Core_6.0_icon.png" alt="Windows Powershell" width="40" height="40"/>
+
+<a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gnu-bash-logo.svg/240px-Gnu-bash-logo.svg.png" alt="bash" width="40" height="40"/>
+<a href="https://dev.w3.org/html5/spec-LC/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/260px-HTML5_logo_and_wordmark.svg.png" alt="html5" width="40" height="40"/>
+<a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/240px-CSS3_logo_and_wordmark.svg.png" alt="css" width="40" height="40"/>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/300px-Git-logo.svg.png" alt="git" width="40" height="40"/>
+
 ## Projects:
 - [Floppy Bird Clone in Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Floppy%20Bird%20Clone)
   - Python implementation of Floppy Bird using Pygame
@@ -10,16 +21,6 @@ This repository is a record of my Software Engineering journey. It contains my s
   - Python script demonstrates AES-256 encryption and decryption using the pycryptodome library
 - [Python Chatbot](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Python%20Chatbot)
   - Simple AI chatbot created using Python, Flask, and the ChatterBot library
-
-## Programming Languages
-- Python (Flask)
-- Git
-- Bash
-- Docker
-- Javascript (React, node.js)
-- SQL
-- HTML
-- CSS
 
 ## About Me
 I have 5 years years of experience in technical project management, product management, and application support. While the work was fulfilling, these roles gradually built my passion for building software before I decided to dedicate my efforts full-time to becoming a software eningeer.
