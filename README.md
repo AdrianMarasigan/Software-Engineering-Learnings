@@ -1,7 +1,7 @@
 # Software Engineering Journey
 This repository is a record of my Software Engineering journey. It contains my some of my projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
 
-## Programming Languages
+## Programming Languages and Tools
 <a href="https://www.python.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png" alt="python" width="40" height="40"/>
 <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/240px-Flask_logo.svg.png" alt="flask" width="40" height="40"/>
 <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/240px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="40" height="40"/>
