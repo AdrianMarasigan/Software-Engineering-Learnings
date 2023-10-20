@@ -1,3 +1,5 @@
+# Original code from https://www.geeksforgeeks.org/how-to-make-flappy-bird-game-in-pygame/
+
 # Import module 
 import random 
 import sys 
