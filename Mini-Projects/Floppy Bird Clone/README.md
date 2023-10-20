@@ -6,14 +6,28 @@ This Python program emulates the popular Flappy Bird game using the Pygame libra
 ## Planning and Implementing the Code
 This project was based off of a Geeksforgeeks article on how to build the [flappy bird game](https://www.geeksforgeeks.org/how-to-make-flappy-bird-game-in-pygame/). 
 
-The original code was based off of just functions. I spent time to understand what was going on and decided to break it out into classes for the game, the config, and loading images. After I made these updates, I decided to split up the files instead:
+The original code only had functions. I spent time to understand what was going on and decided to break it out into classes for the game, the config, and loading images. After I made the class updates, I decided to split up the classes into separate files instead:
 - config.py
 - game.py
 - image_loader.py
 - main.py
 - requirements.txt
 
-
+The files you see are the updates as of 10/17/2023. Thinking back, I should've have created additional classes within the game file. If I were to do it again, I would create the following classes and the associated methods in the game.py file:
+- FlappyBird
+  - initialize_game
+  - run
+  - start_game_loop
+  - is_game_over
+  - end_game
+- Bird
+  - flap
+  - update
+  - draw
+  - is_colliding
+- Pipe
+  - update
+  - draw
 
 ## Getting Started
 
@@ -29,3 +43,5 @@ The original code was based off of just functions. I spent time to understand wh
    ```shell
    python main.py
    ```
+## Thank you
+Thank you to bansalshubhamcse21 who wrote the article on Geeksforgeeks.
