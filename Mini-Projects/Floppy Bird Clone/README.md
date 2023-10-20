@@ -3,6 +3,14 @@ This Python program emulates the popular Flappy Bird game using the Pygame libra
 
 ![Floppy Bird Clone Screenshot](https://github.com/c0olade/Software-Engineering-Journey/blob/main/Mini-Projects/Floppy%20Bird%20Clone/images/Flappy.gif)
 
+## Planning and Implementing the Code
+This project was based off of a Geeksforgeeks article on how to build the [flappy bird game](https://www.geeksforgeeks.org/how-to-make-flappy-bird-game-in-pygame/). I adjusted the implementation to split the files into the following files:
+- config.py
+- game.py
+- image_loader.py
+- main.py
+- requirements.txt
+
 ## Getting Started
 
 1. **Prerequisites:**
