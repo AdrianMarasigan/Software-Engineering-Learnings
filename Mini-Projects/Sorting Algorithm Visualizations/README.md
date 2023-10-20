@@ -1,6 +1,8 @@
 # Sorting Algorithm Visualizations
 These Python scripts demonstrates how some sorting algorithms work with a visual representation of the sorting process using the matplotlib library. 
 
+The most challenging part of this project was finding out how to best visualize each algorithm for understanding. Please feel free to use my code and play around with the different visualiation options, which is a fun way for developing an understadning of the algorithm at each step and for practicing your implementation of each algorithm.
+
 ### Bubble Sort 
 Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted.
 
