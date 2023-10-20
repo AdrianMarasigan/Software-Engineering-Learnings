@@ -52,9 +52,3 @@ python bubble_sort_visualization.py
 
 ### Close the Visualization:
 After the sorting is complete and you've observed the visualization, you can close the visualization window to end the program.
-
-## Customization
-You can customize the script by modifying the following aspects:
-
-arr: You can change the arr variable to contain any list of integers you want to sort.
-plt.pause(0.5): You can adjust the pause duration to control the speed of the visualization. Smaller values will make the sorting process faster, while larger values will slow it down.
