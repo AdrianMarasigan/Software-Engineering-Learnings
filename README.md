@@ -1,5 +1,5 @@
-# Software Engineering Learnings
-This repository is a record of my Software Engineering journey. It contains my some of my projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
+# Software Repository
+This repository is a record of my Software/Data Engineering journey.
 
 ## About me
 I'm currently focused on transitioning into an entry-level software engineering, data engineering, or data analytics role, either remote or based in the New York Metropolitan area. Over the past 5 years, I've gained extensive experience in software development through roles in project management, product management, and application support.
