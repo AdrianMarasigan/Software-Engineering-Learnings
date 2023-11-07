@@ -43,7 +43,7 @@ Some key points to note about AES 256 encryption:
 Overall, AES 256 is a robust encryption algorithm that plays a crucial role in securing sensitive data in many modern computing systems.
 
 ## Walkthrough of the Code:
-1. **Imports and Dependencies:** The script starts by importing necessary libraries, including hashlib, base64, os, and pycryptodome modules.
+1. **Imports and Dependencies:** The script starts by importing hashlib, base64, os, and pycryptodome modules.
 
 2. **Clearing the Console:** It clears the console screen based on the operating system to provide a clean interface for user interaction.
 
