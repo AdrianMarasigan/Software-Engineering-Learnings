@@ -1,8 +1,8 @@
-# Software Engineering Journey
+# Software Engineering Learnings
 This repository is a record of my Software Engineering journey. It contains my some of my projects, details about me, and my full curriculum with self-documented notes and any code associated I've implemented to the learnings.
 
 ## About me
-I am a self-taught professional in the software industry, based in the New York Metropolitan area. Over the past 5 years, I've gained extensive experience in software development through roles in project management, product management, and application support.
+I'm currently focused on transitioning into an entry-level software engineering, data engineering, or data analytics role, either remote or based in the New York Metropolitan area. Over the past 5 years, I've gained extensive experience in software development through roles in project management, product management, and application support.
 
 ## Languages and Tools
 
@@ -25,16 +25,22 @@ I am a self-taught professional in the software industry, based in the New York 
 🎯 Improving my python implementation skills by solving coding challenges daily.  
 🎯 Incorporating git and bash as part of a daily routine.  
 
-## In Progress Projects:
-🚀 [URL Shortener](https://github.com/c0olade/url-shortener)
+## Focused on Skill Development:
+🌟 Software Engineering: Engaged in a mentorship program covering key areas, including Computer Science, Design Patterns, Data Structures, Algorithms, Object-Oriented Programming, Scalable Code Design, and Source Control Management.  
+🌟 Data Engineering: Exploring data engineering topics and tools to build data pipelines.  
+🌟 Cloud Technologies: Delving into AWS cloud services and their integration into software and data engineering projects.  
 
 ## Completed Projects:
-✅ [Flappy Bird Clone in Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Floppy%20Bird%20Clone)  
 ✅ [Sorting Algorithm Visualizations in Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Sorting%20Algorithm%20Visualizations)  
+✅ [Flappy Bird Clone in Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Floppy%20Bird%20Clone)  
 ✅ [AES 256 encryption and decryption using Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/AES%20256%20encryption%20and%20decryption%20using%20Python)  
 ✅ [Python Chatbot](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Python%20Chatbot)  
 
+## In Progress Projects:
+🚀 [URL Shortener](https://github.com/c0olade/url-shortener)  
+🚀 [Data Pipeline and Visualization](https://github.com/c0olade/data-pipeline)
 
+<!--
 ## My Learnings
 This section contains a list of topics that I've covered and documented.
 
@@ -50,3 +56,4 @@ This section contains a list of topics that I've covered and documented.
 ### [AI](https://github.com/c0olade/Software-Engineering-Journey/tree/main/My%20Learnings/AI)
 ### [Cybersecurity](https://github.com/c0olade/Software-Engineering-Journey/tree/main/My%20Learnings/Cybersecurity)
 ### [API Development](https://github.com/c0olade/Software-Engineering-Journey/tree/main/My%20Learnings/API%20Development)
+-->
