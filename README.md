@@ -2,10 +2,11 @@
 This repository is a record of my Software/Data Engineering journey.
 
 ## About me
-I'm currently focused on transitioning into an entry-level software engineering, data engineering, or data analytics roles by building my skillset through self-learning, building projects, and practicing my code implementation. Prior to this, I worked in software development in project management, product management, and application support.
+I am a self-taught software engineer with 1 year of programming experience in Python. I'm also have 5 years of progressive experience in software project management, product management, and application support.
+
+I am actively working on cloud technologies, specifically AWS (EC2, S3, RDS, DynamoDB, Lambda), and incorporating database design and management into my projects. I have dabbled in javascript (React), HTML, and CSS. 
 
 ## Languages and Tools
-
 <a href="https://www.python.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png" alt="python" width="40" height="40"/>
 <a href="https://learn.microsoft.com/en-us/powershell/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/PowerShell_Core_6.0_icon.png/242px-PowerShell_Core_6.0_icon.png" alt="Windows Powershell" width="40" height="40"/>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript" width="40" height="40"/>
@@ -20,15 +21,11 @@ I'm currently focused on transitioning into an entry-level software engineering,
 <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/240px-Flask_logo.svg.png" alt="flask" width="40" height="40"/>
 -->
 
-## Current Objectives:
-🚀 Developing software engineering best practices under guidance of senior engineers from big tech.  
-🎯 Improving my python implementation skills by solving coding challenges daily.  
-🎯 Incorporating git and bash as part of a daily routine.  
 
 ## Focused on Skill Development:
-🌟 Software Engineering: Engaged in a mentorship program covering key areas, including Computer Science, Design Patterns, Data Structures, Algorithms, Object-Oriented Programming, Scalable Code Design, and Source Control Management.  
-🌟 Data Engineering: Exploring data engineering topics and tools to build data pipelines.  
-🌟 Cloud Technologies: Delving into AWS cloud services and their integration into software and data engineering projects.  
+🌟 Software Engineering: Engaged in a mentorship program covering key areas, including Computer Science, Design Patterns, Data Structures, Algorithms, Object-Oriented Programming, Scalable Code Design, and Source Control Management.   
+🌟 Cloud Technologies: Delving into AWS cloud services and their integration into software and data engineering projects.   
+🌟 Database Design: Diving into database systems, including data modeling, entity relationship diagrams, normalization, and SQL querying, and incorporating these learnings into projects.  
 
 ## Completed Projects:
 ✅ [Serverless Web Scraping with AWS Lambda and BeautifulSoup](https://github.com/c0olade/Software-Engineering-Learnings/tree/main/Mini-Projects/Serverless%20Web%20Scraping%20with%20AWS%20Lambda%20and%20BeautifulSoup)  
