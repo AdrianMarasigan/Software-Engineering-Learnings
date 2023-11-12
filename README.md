@@ -1,3 +1,4 @@
+<!--
 # Software Repository
 This repository is a record of my Software/Data Engineering journey.
 
@@ -35,7 +36,7 @@ I am actively working on cloud technologies, specifically AWS (EC2, S3, RDS, Dyn
 🚀 [URL Shortener](https://github.com/c0olade/url-shortener)  
 🚀 [Data Pipeline and Visualization](https://github.com/c0olade/data-pipeline)
 
-<!--
+
 ## My Learnings
 This section contains a list of topics that I've covered and documented.
 
