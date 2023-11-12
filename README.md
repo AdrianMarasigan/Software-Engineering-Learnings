@@ -7,19 +7,17 @@ I am a self-taught software engineer with 1 year of programming experience in Py
 I am actively working on cloud technologies, specifically AWS (EC2, S3, RDS, DynamoDB, Lambda), and incorporating database design and management into my projects. I have dabbled in javascript (React), HTML, and CSS. 
 
 ## Languages and Tools
+- Python
+- Javascript
+- SQL
+- HTML/CSS
+- Amazon Web Services
+
 <a href="https://www.python.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/242px-Python-logo-notext.svg.png" alt="python" width="40" height="40"/>
-<a href="https://learn.microsoft.com/en-us/powershell/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/PowerShell_Core_6.0_icon.png/242px-PowerShell_Core_6.0_icon.png" alt="Windows Powershell" width="40" height="40"/>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript" width="40" height="40"/>
-<a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gnu-bash-logo.svg/240px-Gnu-bash-logo.svg.png" alt="bash" width="40" height="40"/>
 <a href="https://dev.w3.org/html5/spec-LC/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/260px-HTML5_logo_and_wordmark.svg.png" alt="html5" width="40" height="40"/>
 <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/240px-CSS3_logo_and_wordmark.svg.png" alt="css" width="40" height="40"/>
-<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/300px-Git-logo.svg.png" alt="git" width="40" height="40"/>
-<a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/240px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="40" height="40"/>
-
-<!--
-<a href="" target="_blank" rel="noreferrer"> <img src="" alt="" width="40" height="40"/>
-<a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/240px-Flask_logo.svg.png" alt="flask" width="40" height="40"/>
--->
+<a href="https://aws.amazon.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/225px-Amazon_Web_Services_Logo.svg.png" alt="AWS Web Services" width="40" height="40"/>
 
 
 ## Focused on Skill Development:
