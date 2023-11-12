@@ -26,7 +26,6 @@ I am actively working on cloud technologies, specifically AWS (EC2, S3, RDS, Dyn
 🌟 Database Design: Diving into database systems, including data modeling, entity relationship diagrams, normalization, and SQL querying, and incorporating these learnings into projects.  
 
 ## Completed Projects:
-✅ [Serverless Web Scraping with AWS Lambda and BeautifulSoup](https://github.com/c0olade/Software-Engineering-Learnings/tree/main/Mini-Projects/Serverless%20Web%20Scraping%20with%20AWS%20Lambda%20and%20BeautifulSoup)  
 ✅ [Sorting Algorithm Visualizations in Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Sorting%20Algorithm%20Visualizations)  
 ✅ [Flappy Bird Clone in Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/Floppy%20Bird%20Clone)  
 ✅ [AES 256 encryption and decryption using Python](https://github.com/c0olade/Software-Engineering-Journey/tree/main/Mini-Projects/AES%20256%20encryption%20and%20decryption%20using%20Python)  
