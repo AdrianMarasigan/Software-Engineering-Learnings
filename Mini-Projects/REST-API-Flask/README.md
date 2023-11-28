@@ -1,6 +1,6 @@
 # REST API using Flask
 
-This project is a simple REST API built using Flask based off of [an article from Akamai.](https://www.linode.com/docs/guides/create-restful-api-using-python-and-flask/) The API manages information about programming languages, allowing you to perform CRUD (Create, Read, Update, Delete) operations on a collection of programming languages.
+This project is a simple REST API built using Flask based off of [an article from Akamai.](https://www.linode.com/docs/guides/create-restful-api-using-python-and-flask/) The API manages information about programming languages, allowing you to perform CRUD (Create, Read, Update, Delete) operations on a collection of programming languages. 
 
 ## Table of Contents
 
